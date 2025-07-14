@@ -1,56 +1,58 @@
-# Module Federation for Metro Bundler
+# Metro Module Federation
+
+## About
+
+This monorepo contains all the tools you'll need to adapt your React Native apps and start using Module Federation with Metro bundler.
+
+### Packages in this repo:
+- `@module-federation/metro` - Core integration with Metro to enable Module Federation
+- `@module-federation/metro-plugin-rnc-cli` - React Native CLI integration
+- `@module-federation/metro-plugin-rnef` - React Native Enterprise Framework integration
+
+> **Note**: Module Federation support for Metro bundler is still experimental and may lack some functionality or certain integrations.
 
 ## Getting Started
 
-### Prerequisites
+For detailed setup instructions and configuration options, see the [Metro Module Federation Core Package README](./packages/core/README.md).
 
-- Node.js version 22 (as specified in `.nvmrc`)
-- Corepack
+## Usage
 
-In case Corepack is not available, you can install it manually:
+The configuration follows the standard [Module Federation configuration format](https://module-federation.io/configure/). For detailed information about Module Federation concepts, configuration options, and usage patterns, please refer to the official [Module Federation documentation](https://module-federation.io/).
 
-```bash
-npm install -g corepack
-```
+## Examples
 
-### Setup Steps
+This repository includes several example applications to help you get started:
 
-1. Clone the repository with submodules:
+- **[example-host](./apps/example-host)** - Basic host application that consumes remote modules
+- **[example-mini](./apps/example-mini)** - Basic mini application that exposes modules
+- **[example-nested-mini](./apps/example-nested-mini)** - Mini application with nested module dependencies
+- **[showcase-host](./apps/showcase-host)** - Showcase host application
+- **[showcase-mini](./apps/showcase-mini)** - Showcase mini application
 
-```bash
-git clone --recurse-submodules -j8 git@github.com:module-federation/metro.git mf-metro
-```
+For instructions on how to run these examples, see [Running Examples](./CONTRIBUTING.md#running-examples) in our Contributing Guide.
 
-2. Navigate to the project directory:
+### CLI Commands
 
-```bash
-cd mf-metro
-```
+For detailed information about available CLI commands see the [React Native CLI Plugin README](./packages/plugin-rnc-cli/README.md).
 
-3. Enable Corepack and install dependencies in the monorepo:
+### React Native Enterprise Framework (RNEF) Integration
 
-```bash
-corepack enable && corepack install && yarn install
-```
+For detailed information about RNEF integration and configuration, see the [RNEF Plugin README](./packages/plugin-rnef/README.md).
 
-4. Navigate to the Metro submodule:
 
-```bash
-cd external/metro
-```
+## Contributing
 
-5. Set the correct Yarn version for Metro and install dependencies:
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details on how to set up the development environment and run examples.
 
-```bash
-yarn set version 1.22.22 && yarn install
-```
+## License
 
-## Development
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
-Run the development servers for both showcase apps:
+## Support
 
-```bash
-yarn dev
-```
+- 💬 [Discord Community](https://discord.gg/n69NnT3ACV)
+- 🐛 [GitHub Issues](https://github.com/module-federation/metro/issues)
 
-> **Note:** You can freely make changes to both the `@module-federation/metro` package (`packages/core`) and the the dev server will automatically restart when changes are detected - there's no need to manually build either package.
+---
+
+Built with ❤️ by [Callstack](https://callstack.com) and [Zephyr Cloud](https://zephyr-cloud.io/).
