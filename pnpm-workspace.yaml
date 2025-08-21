@@ -8,8 +8,8 @@ onlyBuiltDependencies:
   - "@biomejs/biome"
   - core-js
 
-patchedDependencies:
-  lottie-react-native: patches/lottie-react-native.patch
+
+
 
 publicHoistPattern:
   - "@babel/runtime"

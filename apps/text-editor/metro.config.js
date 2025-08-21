@@ -9,7 +9,6 @@ const { withModuleFederation } = require('@module-federation/metro');
  *
  * @type {import('@react-native/metro-config').MetroConfig}
  */
-
 const config = {
   resolver: { useWatchman: false },
   watchFolders: [
@@ -21,39 +20,39 @@ const config = {
 module.exports = withModuleFederation(
   mergeConfig(getDefaultConfig(__dirname), config),
   {
-    name: 'MFExampleHost',
-    remotes: {
-      MFTextEditor: 'MFTextEditor@http://localhost:8082/mf-manifest.json',
-      MFNotesList: 'MFNotesList@http://localhost:8083/mf-manifest.json',
-      // MFNotesList: 'MFNotesList@http://localhost:8083/mf-manifest.json',
+    name: 'MFTextEditor',
+    filename: 'MFTextEditor.bundle',
+    exposes: {
+      './text-editor': './src/text-editor/text-editor.tsx',
     },
     shared: {
       react: {
         singleton: true,
-        eager: true,
+        eager: false,
         requiredVersion: '19.1.0',
         version: '19.1.0',
+        import: false,
       },
       'react-native': {
         singleton: true,
-        eager: true,
+        eager: false,
         requiredVersion: '0.80.0',
         version: '0.80.0',
+        import: false,
       },
       'react-native-pell-rich-editor': {
-        singleton: true,
-        eager: true,
+        singleton: false,
+        eager: false,
         version: '1.10.0',
       },
       'react-native-webview': {
-        singleton: true,
-        eager: true,
+        singleton: false,
+        eager: false,
         version: '13.15.0',
         import: false,
       },
     },
-    shareStrategy: 'loaded-first',
-    plugins: [path.resolve(__dirname, './runtime-plugin.ts')],
+    shareStrategy: 'version-first',
   },
   {
     flags: {

@@ -12,7 +12,7 @@
     "prepare": "pnpm build",
     "build": "turbo build",
     "dev": "turbo dev --filter=showcase-host --filter=showcase-mini --ui=tui",
-    "dev:example": "turbo dev --filter=example-host --filter=example-mini --filter=example-nested-mini --ui=tui",
+    "dev:example": "turbo dev --filter=example-host --filter=MFTextEditor --filter=MFNotesList --ui=tui",
     "lint": "biome check --write",
     "lint:ci": "biome check",
     "typecheck": "turbo typecheck"

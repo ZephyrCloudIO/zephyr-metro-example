@@ -1,111 +1,177 @@
-import React, { useEffect, useState } from 'react';
-import {
-  ActivityIndicator,
-  Pressable,
-  SafeAreaView,
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
+
+import React, {Suspense, useRef, useState} from 'react';
+
+import { 
+  StatusBar,
   StyleSheet,
   Text,
+  useColorScheme,
   View,
+  Dimensions,
+  Platform,
 } from 'react-native';
+import {FloatingAction} from 'react-native-floating-action';
+
+
+
+import AddIcon from './components/AddIcon';
+// import {Note, useNotes} from '@database';
+import {RichEditor} from 'react-native-pell-rich-editor';
+import { useNotes } from './database/useNotes.ts';
+
+const actions = [
+  {
+    name: 'add',
+    text: 'Add',
+    icon: <AddIcon />,
+  },
+];
 
 // @ts-ignore
-import NestedMiniInfo from 'nestedMini/nestedMiniInfo';
-import Card from './Card';
+const TextEditor = React.lazy(() => import('MFTextEditor/text-editor'));
+
 
 // @ts-ignore
-const Info = React.lazy(() => import('mini/info'));
+const NotesList = React.lazy(() => import('MFNotesList/notes-list'));
+
+// Card component with medium border radius, 16px padding, and shadows
+const Card = ({children}: {children: React.ReactNode}) => {
+  return <View style={styles.card}>{children}</View>;
+};
+
+const BORDER_WIDTH = 8;
 
 function App(): React.JSX.Element {
-  const [shouldLoadMini, setShouldLoadMini] = useState(false);
-  const [lodashVersion, setLodashVersion] = useState<string>();
+  const isDarkMode = useColorScheme() === 'dark';
 
-  useEffect(() => {
-    import('lodash').then((lodash) => {
-      setLodashVersion(lodash.VERSION);
-    });
-  }, []);
+  const {createNote, notes, updateNote} = useNotes();
+
+  const backgroundStyle = {
+    backgroundColor: '#F3F3F3',
+  };
+  const richtext = useRef<RichEditor | null>(null);
+
+  const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
+
+  const [selectedNote, setSelectedNote] = useState<any | null>(null);
+
+  const handleAddNote = async () => {
+    const content = await richtext.current?.getContentHtml();
+    if (selectedNote) {
+      await updateNote(selectedNote.id, content || '');
+    } else if (content && content.length > 0) {
+      await createNote(content);
+    }
+    richtext.current?.setContentHTML('');
+    richtext.current?.dismissKeyboard();
+  };
+
+  const handleNotePress = (note: any) => {
+    setSelectedNote(note);
+    richtext.current?.setContentHTML(note.content);
+  };
 
   return (
-    <View style={styles.backgroundStyle}>
-      <SafeAreaView />
-      <View style={styles.contentContainer}>
-        <Card title="Host Info" description="Host app info">
-          <React.Suspense
+    <View
+      style={[
+        backgroundStyle,
+        {
+          width: screenWidth,
+          height:  screenHeight,
+          paddingTop: Platform.OS === 'ios' ? 60 : StatusBar.currentHeight || 20,
+          paddingLeft: 0,
+          paddingBottom: 0,
+          paddingRight: 0,
+        },
+      ]}>
+      <StatusBar
+        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        backgroundColor={backgroundStyle.backgroundColor}
+      />
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          paddingHorizontal: 8,
+          gap: 16,
+        }}>
+        <Card>
+          <Suspense
             fallback={
-              <View>
-                <ActivityIndicator size="large" color="#8b5cf6" />
+              <View style={styles.card}>
+                <Text>Loading...</Text>
               </View>
-            }
-          >
-            <Info
-              testID="host-app-info"
-              sections={[
-                {
-                  name: 'lodash version',
-                  value: lodashVersion,
-                  testID: 'host-lodash',
-                },
-              ]}
-            />
-          </React.Suspense>
+            }>
+            <TextEditor richtext={richtext} />
+          </Suspense>
         </Card>
-        <Card title="Federated Remote" description="Dynamically loaded module">
-          {!shouldLoadMini ? (
-            <Pressable
-              style={styles.defaultButton}
-              onPress={() => setShouldLoadMini(true)}
-            >
-              <Text testID="load-mini-button" style={styles.defaultButtonText}>
-                Load Remote Component
-              </Text>
-            </Pressable>
-          ) : (
-            <React.Suspense
-              fallback={
-                <View>
-                  <ActivityIndicator size="large" color="#8b5cf6" />
-                </View>
-              }
-            >
-              <Info />
-            </React.Suspense>
-          )}
-        </Card>
-        <Card
-          title="Nested Federated Remote"
-          description="Dynamically loaded nested module"
-        >
-          <NestedMiniInfo />
+        <Card>
+          <Suspense
+            fallback={
+              <View style={styles.card}>
+                <Text>Loading...</Text>
+              </View>
+            }>
+            <NotesList notes={notes} onNotePress={handleNotePress} />
+          </Suspense>
         </Card>
       </View>
+      <FloatingAction
+        position="right"
+        listenKeyboard
+        overrideWithAction
+        actions={actions}
+        onPressItem={handleAddNote}
+      />
     </View>
   );
 }
 
+
+
 const styles = StyleSheet.create({
-  backgroundStyle: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.65)',
-  },
-  contentContainer: {
-    flex: 1,
+  sectionContainer: {
+    marginTop: 32,
     paddingHorizontal: 24,
   },
-  defaultButton: {
-    backgroundColor: '#000',
-    padding: 16,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.1)',
-  },
-  defaultButtonText: {
-    color: '#fff',
-    fontSize: 16,
+  sectionTitle: {
+    fontSize: 24,
     fontWeight: '600',
-    letterSpacing: 0.5,
+  },
+  sectionDescription: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: '400',
+  },
+  highlight: {
+    fontWeight: '700',
+  },
+  card: {
+    backgroundColor: '#ffffff',
+    borderRadius: 12, // Medium border radius
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5, // For Android shadow
+    width: '100%', // Stretch to max width
+    height: '50%', // 50% of screen height
+    flex: 1,
+    justifyContent: 'center',
+  },
+  cardText: {
+    fontSize: 16,
+    textAlign: 'center',
   },
 });
 
