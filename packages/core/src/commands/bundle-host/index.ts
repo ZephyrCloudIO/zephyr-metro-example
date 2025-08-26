@@ -1,9 +1,8 @@
 import path from 'node:path';
-import util from 'node:util';
 import Server from 'metro/src/Server';
 import type { RequestOptions } from 'metro/src/shared/types';
 import type { ModuleFederationConfigNormalized } from '../../types';
-import { CLIError } from '../../utils/errors';
+import { CLIError, styleText } from '../../utils';
 import type { Config } from '../types';
 import { createResolver } from '../utils/create-resolver';
 import { getCommunityCliPlugin } from '../utils/get-community-plugin';
@@ -40,7 +39,7 @@ async function bundleFederatedHost(
   const hostEntryFilepath = global.__METRO_FEDERATION_HOST_ENTRY_PATH;
   if (!hostEntryFilepath) {
     logger.error(
-      `${util.styleText('red', 'error')} Cannot determine the host entrypoint path.`
+      `${styleText('red', 'error')} Cannot determine the host entrypoint path.`
     );
     throw new CLIError('Bundling failed');
   }

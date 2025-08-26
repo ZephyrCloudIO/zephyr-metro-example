@@ -1,6 +1,6 @@
 const path = require('node:path');
 const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
-
+const { withZephyr } = require('zephyr-metro-plugin');
 const { withModuleFederation } = require('@module-federation/metro');
 
 /**
@@ -18,14 +18,13 @@ const config = {
   ],
 };
 
-module.exports = withModuleFederation(
-  mergeConfig(getDefaultConfig(__dirname), config),
-  {
+const getConfig = async () => { 
+
+  const zephyrConfig = await withZephyr()(  {
     name: 'MFExampleHost',
     remotes: {
       MFTextEditor: 'MFTextEditor@http://localhost:8082/mf-manifest.json',
       MFNotesList: 'MFNotesList@http://localhost:8083/mf-manifest.json',
-      // MFNotesList: 'MFNotesList@http://localhost:8083/mf-manifest.json',
     },
     shared: {
       react: {
@@ -54,12 +53,19 @@ module.exports = withModuleFederation(
     },
     shareStrategy: 'loaded-first',
     plugins: [path.resolve(__dirname, './runtime-plugin.ts')],
-  },
-  {
-    flags: {
-      unstable_patchHMRClient: true,
-      unstable_patchInitializeCore: true,
-      unstable_patchRuntimeRequire: true,
-    },
-  }
-);
+  })
+
+  return withModuleFederation(
+    mergeConfig(getDefaultConfig(__dirname), config),
+    zephyrConfig,
+    {
+      flags: {
+        unstable_patchHMRClient: true,
+        unstable_patchInitializeCore: true,
+        unstable_patchRuntimeRequire: true,
+      },
+    }
+  )
+}
+
+module.exports = getConfig()

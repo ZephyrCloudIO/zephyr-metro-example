@@ -79,7 +79,8 @@ export default function NotesList({ notes, onNotePress }: NotesListProps) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    // backgroundColor: '#f5f5f5',
+    backgroundColor: 'red',
     borderRadius: 12,
     paddingTop: 16,
   },

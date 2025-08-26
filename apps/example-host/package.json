@@ -20,6 +20,10 @@
     "e2e:run:ios": "maestro --platform=ios test e2e",
     "e2e:run:android": "maestro --platform=android test e2e"
   },
+  "zephyr:dependencies": {
+    "MFTextEditor": "zephyr:MFTextEditor@staging",
+    "NotesList": "zephyr:notes-list@feat-text-editor-local"
+  },  
   "dependencies": {
     "@react-native-async-storage/async-storage": "^2.2.0",
     "react": "19.1.0",
@@ -52,7 +56,9 @@
     "nodemon": "^3.1.9",
     "prettier": "2.8.8",
     "react-test-renderer": "19.1.0",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "zephyr-metro-plugin": "/Users/denisbelocerkovec/Developer/zephyr/zephyr-packages/libs/zephyr-metro-plugin",
+    "zephyr-metro-rnef-plugin": "workspace:*"
   },
   "engines": {
     "node": ">=18"

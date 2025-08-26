@@ -48,7 +48,8 @@
   "dependencies": {
     "@expo/metro-runtime": "^5.0.4",
     "@module-federation/runtime": "^0.15.0",
-    "@module-federation/sdk": "^0.15.0"
+    "@module-federation/sdk": "^0.15.0",
+    "chalk": "^4.1.2"
   },
   "peerDependencies": {
     "@babel/types": "^7.25.0",

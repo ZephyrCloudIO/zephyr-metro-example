@@ -1,12 +1,11 @@
 import path from 'node:path';
-import util from 'node:util';
 import type { ConfigT } from 'metro-config';
 import type {
   ModuleFederationConfig,
   ModuleFederationConfigNormalized,
   ModuleFederationExtraOptions,
 } from '../types';
-import { VirtualModuleManager } from '../utils';
+import { VirtualModuleManager, styleText } from '../utils';
 import { createBabelTransformer } from './babel-transformer';
 import {
   isUsingMFBundleCommand,
@@ -41,18 +40,18 @@ export function withModuleFederation(
   }
 
   console.warn(
-    util.styleText(
+    styleText(
       'yellow',
       'Warning: Module Federation build is disabled for this command.\n'
     ) +
-      util.styleText(
+      styleText(
         'yellow',
         'To enable Module Federation, please use one of the dedicated bundle commands:\n'
       ) +
-      ` ${util.styleText('dim', '•')} bundle-mf-host` +
-      util.styleText('dim', ' - for bundling a host application\n') +
-      ` ${util.styleText('dim', '•')} bundle-mf-remote` +
-      util.styleText('dim', ' - for bundling a remote application\n')
+      ` ${styleText('dim', '•')} bundle-mf-host` +
+      styleText('dim', ' - for bundling a host application\n') +
+      ` ${styleText('dim', '•')} bundle-mf-remote` +
+      styleText('dim', ' - for bundling a remote application\n')
   );
 
   return config;
