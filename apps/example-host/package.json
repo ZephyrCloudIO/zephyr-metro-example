@@ -22,14 +22,15 @@
   },
   "zephyr:dependencies": {
     "MFTextEditor": "zephyr:MFTextEditor@staging",
-    "NotesList": "zephyr:notes-list@feat-text-editor-local"
-  },  
+    "MFNotesList": "zephyr:MFNotesList@staging"
+  },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^2.2.0",
     "react": "19.1.0",
     "react-native": "0.80.0",
     "react-native-floating-action": "^1.22.0",
     "react-native-pell-rich-editor": "^1.10.0",
+    "react-native-restart-app": "^1.0.7",
     "react-native-webview": "^13.15.0"
   },
   "devDependencies": {

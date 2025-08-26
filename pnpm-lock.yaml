@@ -32,6 +32,9 @@ importers:
       react-native-pell-rich-editor:
         specifier: ^1.10.0
         version: 1.10.0(react-native-webview@13.15.0(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0))(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))
+      react-native-restart-app:
+        specifier: ^1.0.7
+        version: 1.0.7(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)
       react-native-webview:
         specifier: ^13.15.0
         version: 13.15.0(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)
@@ -3812,6 +3815,12 @@ packages:
     peerDependencies:
       react-native: '>=0.50.0'
       react-native-webview: '>=7.5.2'
+
+  react-native-restart-app@1.0.7:
+    resolution: {integrity: sha512-yKX8lQGOwPa5kckDR+yRJ24gUI++UCMjj2H96jGwtmWbujm+zRgpoYNlUza6fiRZainZj/+u7DMxU1fpVg+2+w==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
 
   react-native-webview@13.15.0:
     resolution: {integrity: sha512-Vzjgy8mmxa/JO6l5KZrsTC7YemSdq+qB01diA0FqjUTaWGAGwuykpJ73MDj3+mzBSlaDxAEugHzTtkUQkQEQeQ==}
@@ -9096,6 +9105,11 @@ snapshots:
     dependencies:
       react-native: 0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0)
       react-native-webview: 13.15.0(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)
+
+  react-native-restart-app@1.0.7(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+      react-native: 0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0)
 
   react-native-webview@13.15.0(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0):
     dependencies:

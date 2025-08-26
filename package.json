@@ -13,6 +13,8 @@
     "build": "turbo build",
     "dev": "turbo dev --filter=showcase-host --filter=showcase-mini --ui=tui",
     "dev:example": "turbo dev --filter=example-host --filter=MFTextEditor --filter=MFNotesList --ui=tui",
+    "build:ios:zephyr": "turbo build:ios:zephyr --filter=MFTextEditor --filter=MFNotesList",
+    "pods": "pnpm --filter example-host run pods",
     "lint": "biome check --write",
     "lint:ci": "biome check",
     "typecheck": "turbo typecheck"
