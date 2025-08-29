@@ -53,7 +53,7 @@
     "react-test-renderer": "19.1.0",
     "serve": "^14.2.4",
     "typescript": "5.0.4",
-    "zephyr-metro-plugin": "/Users/denisbelocerkovec/Developer/zephyr/zephyr-packages/libs/zephyr-metro-plugin",
+    "zephyr-metro-plugin": "0.0.0-canary-20250813124421",
     "zephyr-metro-rnef-plugin": "workspace:*"
   },
   "engines": {

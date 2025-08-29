@@ -36,7 +36,7 @@
       "@types/node": "^20.0.0",
       "@module-federation/metro": "workspace:*",
       "typescript": "5.0.4",
-      "zephyr-metro-plugin": "/Users/denisbelocerkovec/Developer/zephyr/zephyr-packages/libs/zephyr-metro-plugin"
+      "zephyr-metro-plugin": "0.0.0-canary-20250813124421"
     },
     "peerDependencies": {
       "@rnef/tools": "^0.7.18",
