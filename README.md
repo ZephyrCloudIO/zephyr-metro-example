@@ -18,7 +18,10 @@
 
 1. `pnpm build:ios` - build bundles
 2. `pnpm serve:ios` - serve remotes locally
-3. in new terminal `pnpm release:ios` - build ios
+3. run `pnpm pods` to install pods
+4. on Zephyr for each remote app create new environment for example `staging`
+5. Open `apps/host/ios` in Xcode, in `Signing and Capabilities` choose your Team to signing build
+6. in new terminal `pnpm release:ios` - build ios
 
 
 
