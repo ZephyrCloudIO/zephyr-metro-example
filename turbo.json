@@ -18,6 +18,24 @@
       "cache": true,
       "outputs": [],
       "outputLogs": "errors-only"
+    },
+    "build:ios": {
+      "dependsOn": ["^build:ios"],
+      "cache": false,
+      "outputs": ["dist"],
+      "outputLogs": "errors-only"
+    },
+    "build:ios:zephyr": {
+      "dependsOn": ["^build:ios:zephyr"],
+      "cache": false,
+      "outputs": ["dist"],
+      "outputLogs": "errors-only"
+    },
+    "serve:ios": {
+      "dependsOn": ["^serve:ios"],
+      "cache": false,
+      "outputs": [],
+      "outputLogs": "full"
     }
   }
 }

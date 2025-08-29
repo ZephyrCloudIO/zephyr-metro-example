@@ -13,11 +13,18 @@
     "build": "turbo build",
     "dev": "turbo dev --filter=showcase-host --filter=showcase-mini --ui=tui",
     "dev:example": "turbo dev --filter=example-host --filter=MFTextEditor --filter=MFNotesList --ui=tui",
+    "build:ios": "turbo build:ios --filter=MFTextEditor --filter=MFNotesList",
     "build:ios:zephyr": "turbo build:ios:zephyr --filter=MFTextEditor --filter=MFNotesList",
+    "ios:release:zephyr": "turbo ios:release:zephyr --filter=example-host",
+    "ios:release": "turbo ios:release --filter=example-host",
+    "serve:ios": "turbo serve:ios --filter=MFTextEditor --filter=MFNotesList --ui=tui",
+    "release:ios": "cd apps/example-host && pnpm ios:release",
+    "release:ios:zephyr": "cd apps/example-host && pnpm ios:release:zephyr",
     "pods": "pnpm --filter example-host run pods",
     "lint": "biome check --write",
     "lint:ci": "biome check",
-    "typecheck": "turbo typecheck"
+    "typecheck": "turbo typecheck",
+    "clean:ios": "rm -rf apps/example-host/.rnef/cache/*"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

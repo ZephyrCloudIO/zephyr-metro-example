@@ -2,6 +2,7 @@
   "name": "MFTextEditor",
   "version": "0.0.1",
   "private": true,
+
   "scripts": {
     "android": "rnef run:android",
     "ios": "rnef run:ios",

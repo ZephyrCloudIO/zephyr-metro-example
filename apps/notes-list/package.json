@@ -2,6 +2,7 @@
   "name": "MFNotesList",
   "version": "0.0.1",
   "private": true,
+
   "scripts": {
     "android": "rnef run:android",
     "ios": "rnef run:ios",
@@ -15,9 +16,9 @@
     "build:android": "rnef bundle-mf-remote --platform android --dev false",
     "build:rnc:ios": "react-native bundle-mf-remote --platform ios --dev false",
     "build:rnc:android": "react-native bundle-mf-remote --platform android --dev false",
-    "serve:ios": "serve dist/ios -p 8082",
-    "serve:android": "serve dist/android -p 8082",
-    "adbreverse": "adb reverse tcp:8082 tcp:8082"
+    "serve:ios": "serve dist/ios -p 8083",
+    "serve:android": "serve dist/android -p 8083",
+    "adbreverse": "adb reverse tcp:8083 tcp:8083"
   },
   "dependencies": {
     "react": "19.1.0",
