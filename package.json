@@ -1,17 +1,10 @@
 {
-  "name": "module-federation-metro",
-  "private": true,
+  "name": "zephyr-metro-example",
   "license": "MIT",
-  "contributors": [
-    "Jakub Romańczyk <j.romanczyk@gmail.com> (https://github.com/jbroma)",
-    "Kacper Wiszczuk <kacperwiszczuk@gmail.com> (https://github.com/esemesek)"
-  ],
   "packageManager": "pnpm@10.12.1",
-  "repository": "https://github.com/module-federation/metro",
   "scripts": {
     "prepare": "pnpm build",
     "build": "turbo build",
-    "dev": "turbo dev --filter=showcase-host --filter=showcase-mini --ui=tui",
     "dev:example": "turbo dev --filter=example-host --filter=MFTextEditor --filter=MFNotesList --ui=tui",
     "build:ios": "turbo build:ios --filter=MFTextEditor --filter=MFNotesList",
     "build:ios:zephyr": "turbo build:ios:zephyr --filter=MFTextEditor --filter=MFNotesList",
@@ -19,6 +12,7 @@
     "ios:release": "turbo ios:release --filter=example-host",
     "serve:ios": "turbo serve:ios --filter=MFTextEditor --filter=MFNotesList --ui=tui",
     "release:ios": "cd apps/example-host && pnpm ios:release",
+    "ios": "cd apps/example-host && pnpm ios",
     "release:ios:zephyr": "cd apps/example-host && pnpm ios:release:zephyr",
     "pods": "pnpm --filter example-host run pods",
     "lint": "biome check --write",

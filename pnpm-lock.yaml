@@ -49,11 +49,11 @@ importers:
         specifier: ^7.25.0
         version: 7.27.6
       '@module-federation/metro':
-        specifier: workspace:*
-        version: link:../../packages/core
+        specifier: 0.18.4
+        version: 0.18.4(@babel/types@7.28.0)(metro-config@0.82.5)(metro-file-map@0.82.5)(metro-resolver@0.82.5)(metro-source-map@0.82.5)(metro@0.82.5)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)
       '@module-federation/metro-plugin-rnef':
-        specifier: workspace:*
-        version: link:../../packages/plugin-rnef
+        specifier: 0.18.4
+        version: 0.18.4(@module-federation/metro@0.18.4(@babel/types@7.28.0)(metro-config@0.82.5)(metro-file-map@0.82.5)(metro-resolver@0.82.5)(metro-source-map@0.82.5)(metro@0.82.5)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0))(@rnef/tools@0.7.28)
       '@module-federation/runtime':
         specifier: ^0.15.0
         version: 0.15.0
@@ -62,7 +62,7 @@ importers:
         version: 0.80.0(@babel/core@7.28.0)
       '@react-native/eslint-config':
         specifier: 0.80.0
-        version: 0.80.0(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4)))(prettier@2.8.8)(typescript@5.0.4)
+        version: 0.80.0(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6))(prettier@2.8.8)(typescript@5.0.4)
       '@react-native/metro-config':
         specifier: 0.80.0
         version: 0.80.0(@babel/core@7.28.0)
@@ -98,7 +98,7 @@ importers:
         version: 8.57.1
       jest:
         specifier: ^29.6.3
-        version: 29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+        version: 29.7.0(@types/node@20.19.6)
       nodemon:
         specifier: ^3.1.9
         version: 3.1.10
@@ -113,10 +113,7 @@ importers:
         version: 5.0.4
       zephyr-metro-plugin:
         specifier: 0.0.0-canary-20250813124421
-        version: 0.0.0-canary-20250813124421(@types/node@20.19.6)(jiti@2.4.2)(metro-config@0.82.5)(terser@5.43.1)(yaml@2.8.0)
-      zephyr-metro-rnef-plugin:
-        specifier: workspace:*
-        version: link:../../packages/plugin-rnef-zephyr
+        version: 0.0.0-canary-20250813124421(@types/node@20.19.6)(metro-config@0.82.5)(terser@5.43.1)(yaml@2.8.0)
 
   apps/notes-list:
     dependencies:
@@ -143,11 +140,11 @@ importers:
         specifier: ^7.25.0
         version: 7.27.6
       '@module-federation/metro':
-        specifier: workspace:*
-        version: link:../../packages/core
+        specifier: 0.18.4
+        version: 0.18.4(@babel/types@7.28.0)(metro-config@0.82.5)(metro-file-map@0.82.5)(metro-resolver@0.82.5)(metro-source-map@0.82.5)(metro@0.82.5)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)
       '@module-federation/metro-plugin-rnef':
-        specifier: workspace:*
-        version: link:../../packages/plugin-rnef
+        specifier: 0.18.4
+        version: 0.18.4(@module-federation/metro@0.18.4(@babel/types@7.28.0)(metro-config@0.82.5)(metro-file-map@0.82.5)(metro-resolver@0.82.5)(metro-source-map@0.82.5)(metro@0.82.5)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0))(@rnef/tools@0.7.28)
       '@module-federation/runtime':
         specifier: ^0.15.0
         version: 0.15.0
@@ -159,7 +156,7 @@ importers:
         version: 0.80.0(@babel/core@7.28.0)
       '@react-native/eslint-config':
         specifier: 0.80.0
-        version: 0.80.0(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4)))(prettier@2.8.8)(typescript@5.0.4)
+        version: 0.80.0(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6))(prettier@2.8.8)(typescript@5.0.4)
       '@react-native/metro-config':
         specifier: 0.80.0
         version: 0.80.0(@babel/core@7.28.0)
@@ -195,7 +192,7 @@ importers:
         version: 8.57.1
       jest:
         specifier: ^29.6.3
-        version: 29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+        version: 29.7.0(@types/node@20.19.6)
       nodemon:
         specifier: ^3.1.9
         version: 3.1.10
@@ -213,7 +210,7 @@ importers:
         version: 5.0.4
       zephyr-metro-plugin:
         specifier: 0.0.0-canary-20250813124421
-        version: 0.0.0-canary-20250813124421(@types/node@20.19.6)(jiti@2.4.2)(metro-config@0.82.5)(terser@5.43.1)(yaml@2.8.0)
+        version: 0.0.0-canary-20250813124421(@types/node@20.19.6)(metro-config@0.82.5)(terser@5.43.1)(yaml@2.8.0)
       zephyr-metro-rnef-plugin:
         specifier: workspace:*
         version: link:../../packages/plugin-rnef-zephyr
@@ -243,11 +240,11 @@ importers:
         specifier: ^7.25.0
         version: 7.27.6
       '@module-federation/metro':
-        specifier: workspace:*
-        version: link:../../packages/core
+        specifier: 0.18.4
+        version: 0.18.4(@babel/types@7.28.0)(metro-config@0.82.5)(metro-file-map@0.82.5)(metro-resolver@0.82.5)(metro-source-map@0.82.5)(metro@0.82.5)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)
       '@module-federation/metro-plugin-rnef':
-        specifier: workspace:*
-        version: link:../../packages/plugin-rnef
+        specifier: 0.18.4
+        version: 0.18.4(@module-federation/metro@0.18.4(@babel/types@7.28.0)(metro-config@0.82.5)(metro-file-map@0.82.5)(metro-resolver@0.82.5)(metro-source-map@0.82.5)(metro@0.82.5)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0))(@rnef/tools@0.7.28)
       '@module-federation/runtime':
         specifier: ^0.15.0
         version: 0.15.0
@@ -259,7 +256,7 @@ importers:
         version: 0.80.0(@babel/core@7.28.0)
       '@react-native/eslint-config':
         specifier: 0.80.0
-        version: 0.80.0(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4)))(prettier@2.8.8)(typescript@5.0.4)
+        version: 0.80.0(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6))(prettier@2.8.8)(typescript@5.0.4)
       '@react-native/metro-config':
         specifier: 0.80.0
         version: 0.80.0(@babel/core@7.28.0)
@@ -295,7 +292,7 @@ importers:
         version: 8.57.1
       jest:
         specifier: ^29.6.3
-        version: 29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+        version: 29.7.0(@types/node@20.19.6)
       nodemon:
         specifier: ^3.1.9
         version: 3.1.10
@@ -313,95 +310,16 @@ importers:
         version: 5.0.4
       zephyr-metro-plugin:
         specifier: 0.0.0-canary-20250813124421
-        version: 0.0.0-canary-20250813124421(@types/node@20.19.6)(jiti@2.4.2)(metro-config@0.82.5)(terser@5.43.1)(yaml@2.8.0)
+        version: 0.0.0-canary-20250813124421(@types/node@20.19.6)(metro-config@0.82.5)(terser@5.43.1)(yaml@2.8.0)
       zephyr-metro-rnef-plugin:
         specifier: workspace:*
         version: link:../../packages/plugin-rnef-zephyr
 
-  packages/core:
-    dependencies:
-      '@expo/metro-runtime':
-        specifier: ^5.0.4
-        version: 5.0.4(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.8.3))(@types/react@19.1.8)(react@19.1.0))
-      '@module-federation/runtime':
-        specifier: ^0.15.0
-        version: 0.15.0
-      '@module-federation/sdk':
-        specifier: ^0.15.0
-        version: 0.15.0
-      chalk:
-        specifier: ^4.1.2
-        version: 4.1.2
-    devDependencies:
-      '@rslib/core':
-        specifier: ^0.10.0
-        version: 0.10.5(typescript@5.8.3)
-      '@types/node':
-        specifier: ^20.0.0
-        version: 20.19.6
-      '@types/react':
-        specifier: ^19.1.0
-        version: 19.1.8
-      metro:
-        specifier: ^0.82.1
-        version: 0.82.5
-      metro-config:
-        specifier: ^0.82.1
-        version: 0.82.5
-      metro-file-map:
-        specifier: ^0.82.1
-        version: 0.82.5
-      metro-resolver:
-        specifier: ^0.82.1
-        version: 0.82.5
-      metro-source-map:
-        specifier: ^0.82.1
-        version: 0.82.5
-      react:
-        specifier: 19.1.0
-        version: 19.1.0
-      react-native:
-        specifier: 0.80.0
-        version: 0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.8.3))(@types/react@19.1.8)(react@19.1.0)
-      ts-node:
-        specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.19.6)(typescript@5.8.3)
-      typescript:
-        specifier: ^5.8.3
-        version: 5.8.3
-
-  packages/plugin-rnc-cli:
-    devDependencies:
-      '@module-federation/metro':
-        specifier: workspace:*
-        version: link:../core
-
-  packages/plugin-rnef:
-    devDependencies:
-      '@module-federation/metro':
-        specifier: workspace:*
-        version: link:../core
-      '@rnef/config':
-        specifier: ^0.7.18
-        version: 0.7.28
-      '@rnef/tools':
-        specifier: ^0.7.18
-        version: 0.7.28
-      '@rslib/core':
-        specifier: ^0.10.0
-        version: 0.10.5(typescript@5.8.3)
-      '@types/node':
-        specifier: ^20.0.0
-        version: 20.19.6
-      typescript:
-        specifier: ^5.8.3
-        version: 5.8.3
-
   packages/plugin-rnef-zephyr:
     devDependencies:
       '@module-federation/metro':
-        specifier: workspace:*
-        version: link:../core
+        specifier: 0.18.4
+        version: 0.18.4(@babel/types@7.28.0)(metro-config@0.82.5)(metro-file-map@0.82.5)(metro-resolver@0.82.5)(metro-source-map@0.82.5)(metro@0.82.5)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)
       '@rnef/config':
         specifier: ^0.7.18
         version: 0.7.28
@@ -416,71 +334,13 @@ importers:
         version: 5.0.4
       zephyr-metro-plugin:
         specifier: 0.0.0-canary-20250813124421
-        version: 0.0.0-canary-20250813124421(@types/node@20.19.6)(jiti@2.4.2)(metro-config@0.82.5)(terser@5.43.1)(yaml@2.8.0)
+        version: 0.0.0-canary-20250813124421(@types/node@20.19.6)(metro-config@0.82.5)(terser@5.43.1)(yaml@2.8.0)
 
 packages:
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
-
-  '@ast-grep/napi-darwin-arm64@0.37.0':
-    resolution: {integrity: sha512-QAiIiaAbLvMEg/yBbyKn+p1gX2/FuaC0SMf7D7capm/oG4xGMzdeaQIcSosF4TCxxV+hIH4Bz9e4/u7w6Bnk3Q==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [darwin]
-
-  '@ast-grep/napi-darwin-x64@0.37.0':
-    resolution: {integrity: sha512-zvcvdgekd4ySV3zUbUp8HF5nk5zqwiMXTuVzTUdl/w08O7JjM6XPOIVT+d2o/MqwM9rsXdzdergY5oY2RdhSPA==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [darwin]
-
-  '@ast-grep/napi-linux-arm64-gnu@0.37.0':
-    resolution: {integrity: sha512-L7Sj0lXy8X+BqSMgr1LB8cCoWk0rericdeu+dC8/c8zpsav5Oo2IQKY1PmiZ7H8IHoFBbURLf8iklY9wsD+cyA==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
-
-  '@ast-grep/napi-linux-arm64-musl@0.37.0':
-    resolution: {integrity: sha512-LF9sAvYy6es/OdyJDO3RwkX3I82Vkfsng1sqUBcoWC1jVb1wX5YVzHtpQox9JrEhGl+bNp7FYxB4Qba9OdA5GA==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
-
-  '@ast-grep/napi-linux-x64-gnu@0.37.0':
-    resolution: {integrity: sha512-TViz5/klqre6aSmJzswEIjApnGjJzstG/SE8VDWsrftMBMYt2PTu3MeluZVwzSqDao8doT/P+6U11dU05UOgxw==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-
-  '@ast-grep/napi-linux-x64-musl@0.37.0':
-    resolution: {integrity: sha512-/BcCH33S9E3ovOAEoxYngUNXgb+JLg991sdyiNP2bSoYd30a9RHrG7CYwW6fMgua3ijQ474eV6cq9yZO1bCpXg==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-
-  '@ast-grep/napi-win32-arm64-msvc@0.37.0':
-    resolution: {integrity: sha512-TjQA4cFoIEW2bgjLkaL9yqT4XWuuLa5MCNd0VCDhGRDMNQ9+rhwi9eLOWRaap3xzT7g+nlbcEHL3AkVCD2+b3A==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [win32]
-
-  '@ast-grep/napi-win32-ia32-msvc@0.37.0':
-    resolution: {integrity: sha512-uNmVka8fJCdYsyOlF9aZqQMLTatEYBynjChVTzUfFMDfmZ0bihs/YTqJVbkSm8TZM7CUX82apvn50z/dX5iWRA==}
-    engines: {node: '>= 10'}
-    cpu: [ia32]
-    os: [win32]
-
-  '@ast-grep/napi-win32-x64-msvc@0.37.0':
-    resolution: {integrity: sha512-vCiFOT3hSCQuHHfZ933GAwnPzmL0G04JxQEsBRfqONywyT8bSdDc/ECpAfr3S9VcS4JZ9/F6tkePKW/Om2Dq2g==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [win32]
-
-  '@ast-grep/napi@0.37.0':
-    resolution: {integrity: sha512-Hb4o6h1Pf6yRUAX07DR4JVY7dmQw+RVQMW5/m55GoiAT/VRoKCWBtIUPPOnqDVhbx1Cjfil9b6EDrgJsUAujEQ==}
-    engines: {node: '>= 10'}
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -1196,19 +1056,6 @@ packages:
   '@clack/prompts@0.10.1':
     resolution: {integrity: sha512-Q0T02vx8ZM9XSv9/Yde0jTmmBQufZhPJfYAg2XrrrxWWaZgq1rr8nU8Hv710BQ1dhoP8rtY7YUdpGej2Qza/cw==}
 
-  '@cspotcode/source-map-support@0.8.1':
-    resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
-    engines: {node: '>=12'}
-
-  '@emnapi/core@1.4.4':
-    resolution: {integrity: sha512-A9CnAbC6ARNMKcIcrQwq6HeHCjpcBZ5wSx4U01WXCqEKlrzB9F9315WDNHkrs2xbx7YjjSxbUYxuN6EQzpcY2g==}
-
-  '@emnapi/runtime@1.4.4':
-    resolution: {integrity: sha512-hHyapA4A3gPaDCNfiqyZUStTMqIkKRshqPIuDOXv1hcBnD4U3l8cP0T1HMCfGRxQ6V64TGCcoswChANyOAwbQg==}
-
-  '@emnapi/wasi-threads@1.0.3':
-    resolution: {integrity: sha512-8K5IFFsQqF9wQNJptGbS6FNKgUTsSRYnTqNCG1vPP8jFdjSv18n2mQfJpkt2Oibo9iBEzcDnDxNwKTzC7svlJw==}
-
   '@esbuild/aix-ppc64@0.25.9':
     resolution: {integrity: sha512-OaGtL73Jck6pBKjNIe24BnFE6agGl+6KxDtTfHhy1HmhthfKouEcOhqpSL64K4/0WCtbKFLOdzD/44cJ4k9opA==}
     engines: {node: '>=18'}
@@ -1521,9 +1368,6 @@ packages:
   '@jridgewell/trace-mapping@0.3.29':
     resolution: {integrity: sha512-uw6guiW/gcAGPDhLmd77/6lW8QLeiV5RUTsAX46Db6oLhGaVj4lhnPwb184s1bkc8kdVg/+h988dro8GRDpmYQ==}
 
-  '@jridgewell/trace-mapping@0.3.9':
-    resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
-
   '@module-federation/automatic-vendor-federation@1.2.1':
     resolution: {integrity: sha512-73wxkXM7pbRZ6GGM90JP5IPTPvY3fvrhQyTVdMCUx85cQRWqnbzbibcsz3pkOMOeXyYAO4tXXsG13yNaEEGhJA==}
     peerDependencies:
@@ -1532,23 +1376,44 @@ packages:
   '@module-federation/error-codes@0.15.0':
     resolution: {integrity: sha512-CFJSF+XKwTcy0PFZ2l/fSUpR4z247+Uwzp1sXVkdIfJ/ATsnqf0Q01f51qqSEA6MYdQi6FKos9FIcu3dCpQNdg==}
 
+  '@module-federation/error-codes@0.18.4':
+    resolution: {integrity: sha512-cpLsqL8du9CfTTCKvXbRg93ALF+lklqHnuPryhbwVEQg2eYo6CMoMQ6Eb7kJhLigUABIDujbHD01SvBbASGkeQ==}
+
+  '@module-federation/metro-plugin-rnef@0.18.4':
+    resolution: {integrity: sha512-pWUdCkTltXeD0ex8cWa9tKkYlgmW2rZPwpQfMKmpip9jn+rRJEdvq7vF8KC8fE+QpmolxIov3zkvFUHRvtQCNA==}
+    peerDependencies:
+      '@module-federation/metro': 0.18.4
+      '@rnef/tools': ^0.7.18
+
+  '@module-federation/metro@0.18.4':
+    resolution: {integrity: sha512-zdCtXg+bbunaizb7hwUPY3ur/eJB6BiNgw2qDuJCq7q2yLqUHjVq3PQ+4R026Kgj5u9PCQ8lfgVI6s9S0zr2lQ==}
+    peerDependencies:
+      '@babel/types': ^7.25.0
+      metro: ^0.82.1
+      metro-config: ^0.82.1
+      metro-file-map: ^0.82.1
+      metro-resolver: ^0.82.1
+      metro-source-map: ^0.82.1
+      react: '>=19.0.0'
+      react-native: '>=0.79.0'
+
   '@module-federation/runtime-core@0.15.0':
     resolution: {integrity: sha512-RYzI61fRDrhyhaEOXH3AgIGlHiot0wPFXu7F43cr+ZnTi+VlSYWLdlZ4NBuT9uV6JSmH54/c+tEZm5SXgKR2sQ==}
 
-  '@module-federation/runtime-tools@0.15.0':
-    resolution: {integrity: sha512-kzFn3ObUeBp5vaEtN1WMxhTYBuYEErxugu1RzFUERD21X3BZ+b4cWwdFJuBDlsmVjctIg/QSOoZoPXRKAO0foA==}
+  '@module-federation/runtime-core@0.18.4':
+    resolution: {integrity: sha512-LGGlFXlNeTbIGBFDiOvg0zz4jBWCGPqQatXdKx7mylXhDij7YmwbuW19oenX+P1fGhmoBUBM5WndmR87U66qWA==}
 
   '@module-federation/runtime@0.15.0':
     resolution: {integrity: sha512-dTPsCNum9Bhu3yPOcrPYq0YnM9eCMMMNB1wuiqf1+sFbQlNApF0vfZxooqz3ln0/MpgE0jerVvFsLVGfqvC9Ug==}
 
+  '@module-federation/runtime@0.18.4':
+    resolution: {integrity: sha512-2et6p7pjGRHzpmrW425jt/BiAU7QHgkZtbQB7pj01eQ8qx6SloFEBk9ODnV8/ztSm9H2T3d8GxXA6/9xVOslmQ==}
+
   '@module-federation/sdk@0.15.0':
     resolution: {integrity: sha512-PWiYbGcJrKUD6JZiEPihrXhV3bgXdll4bV7rU+opV7tHaun+Z0CdcawjZ82Xnpb8MCPGmqHwa1MPFeUs66zksw==}
 
-  '@module-federation/webpack-bundler-runtime@0.15.0':
-    resolution: {integrity: sha512-i+3wu2Ljh2TmuUpsnjwZVupOVqV50jP0ndA8PSP4gwMKlgdGeaZ4VH5KkHAXGr2eiYUxYLMrJXz1+eILJqeGDg==}
-
-  '@napi-rs/wasm-runtime@0.2.11':
-    resolution: {integrity: sha512-9DPkXtvHydrcOsopiYpUgPHpmj0HWZKMUnL2dZqpvC42lsratuBG06V5ipyno0fUek5VlFsNQ+AcFATSrJXgMA==}
+  '@module-federation/sdk@0.18.4':
+    resolution: {integrity: sha512-dErzOlX+E3HS2Sg1m12Hi9nCnfvQPuIvlq9N47KxrbT2TIU3KKYc9q/Ua+QWqxfTyMVFpbNDwFMJ1R/w/gYf4A==}
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
@@ -1844,89 +1709,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rsbuild/core@1.4.5':
-    resolution: {integrity: sha512-uNaR5/d5FoZjyr8gp39ZLLeQzCAg4folvLS6XDlqtehqwVMCRuJ4IPzQ6nDKzkzCVZI3EBJvKHMZIJOBj7Ttgw==}
-    engines: {node: '>=16.10.0'}
-    hasBin: true
-
-  '@rslib/core@0.10.5':
-    resolution: {integrity: sha512-kThW/bkKgja++/AykW1fJaRK+TAiW3+ZSWiCKJxHHS87ZQc/PeRTxk2A0upHi7R3CyfdGgXGNcEBPoeBUj4zYw==}
-    engines: {node: '>=16.7.0'}
-    hasBin: true
-    peerDependencies:
-      '@microsoft/api-extractor': ^7
-      typescript: ^5
-    peerDependenciesMeta:
-      '@microsoft/api-extractor':
-        optional: true
-      typescript:
-        optional: true
-
-  '@rspack/binding-darwin-arm64@1.4.5':
-    resolution: {integrity: sha512-rK8mJ+85cXrGSTZvr5vqI17TDimAUWYjl0T+JEg5MTqRNbpyovbGHbrrsQyIicwaFOS1wWkaLrBolC/+/FLUeg==}
-    cpu: [arm64]
-    os: [darwin]
-
-  '@rspack/binding-darwin-x64@1.4.5':
-    resolution: {integrity: sha512-6eOhh18VD8x5+SJrs/K6XiDw+FYffzDMsI3Sz78mQW5xvHYzN3HJxIw7oG7UYXqF5I2yORmqvdxV1aAnv8Fc4g==}
-    cpu: [x64]
-    os: [darwin]
-
-  '@rspack/binding-linux-arm64-gnu@1.4.5':
-    resolution: {integrity: sha512-vnz5OItcPREgz+hVqx14HRf0aJQ7yI/2ZEbeTC+Y1JSCbeYAcu6NXYVXDwTOgCNOp1AdMR+rmItHWiJ7goI//Q==}
-    cpu: [arm64]
-    os: [linux]
-
-  '@rspack/binding-linux-arm64-musl@1.4.5':
-    resolution: {integrity: sha512-E4dUEDpAsQ5jTvt8AXs0VY3vxTzSf07CM5zi797VaFzZzbcZqAoBmlAxYTSyl7/BgAxHSg8AYJS5c8l03vXM4w==}
-    cpu: [arm64]
-    os: [linux]
-
-  '@rspack/binding-linux-x64-gnu@1.4.5':
-    resolution: {integrity: sha512-XQxibZY+joqRfoJQwT1sfN68pRExOvJniWBUJfov6ShG/DFSVbMJ2UTwv5pbruIXA/lLnk7KblPdF8pO0WWQvw==}
-    cpu: [x64]
-    os: [linux]
-
-  '@rspack/binding-linux-x64-musl@1.4.5':
-    resolution: {integrity: sha512-bOZmkCZamOz/+D3AA3uHII3rLIx4WtPk+KbDe3nfIVHhgxUK1nmv0vHtKzDA5iplucJ4ha/Rx9TEFyRwnBJH0A==}
-    cpu: [x64]
-    os: [linux]
-
-  '@rspack/binding-wasm32-wasi@1.4.5':
-    resolution: {integrity: sha512-LRyln0jg2FblwFQg+0lPVc/bvDeo3A3EVWQtsTtOwjb4cjAG/Zqo5Q0VobaJTKgBOF9eAHTo9IL92SSj433+Eg==}
-    cpu: [wasm32]
-
-  '@rspack/binding-win32-arm64-msvc@1.4.5':
-    resolution: {integrity: sha512-JWc15Mof/aC41UQSZLwa6oEsPYaYCApW0152Abhnt27qir2pfqYcT5qWt26OJvFDJoe+KzpIG1H91yJviChYYw==}
-    cpu: [arm64]
-    os: [win32]
-
-  '@rspack/binding-win32-ia32-msvc@1.4.5':
-    resolution: {integrity: sha512-PpyNunP8zC5AQtF3Pww7F41bwoJwmGzdJuv2lk/3l74UhjhT4Ac4/dmEaKiYeOr69PPlCtn7Des9VEFufYAZAQ==}
-    cpu: [ia32]
-    os: [win32]
-
-  '@rspack/binding-win32-x64-msvc@1.4.5':
-    resolution: {integrity: sha512-elzpVGJW0W9DTkfJ7JyvMyi2Rbot5Q6rVBBKSh0lRWhZE/LnDJ/1WkS/9yER8XPGjO7umP1hD72ML1SoBddXmA==}
-    cpu: [x64]
-    os: [win32]
-
-  '@rspack/binding@1.4.5':
-    resolution: {integrity: sha512-hO7DrZMMOyzwK7EEYfHMJmWhsNjeYLr39pEnXOWeuCCcwus6e/QNSSf2m/2mSFf0JeINwQqHkA1JvJEZ5JSj6g==}
-
-  '@rspack/core@1.4.5':
-    resolution: {integrity: sha512-4OlxGQ4yPbAOYbVStMotaYrydm8r5VbLByrmQ34LNBYIDSmwaBmHQVMYGIesuGW681pr139XwInKvsoAoW6VTA==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      '@swc/helpers': '>=0.5.1'
-    peerDependenciesMeta:
-      '@swc/helpers':
-        optional: true
-
-  '@rspack/lite-tapable@1.0.1':
-    resolution: {integrity: sha512-VynGOEsVw2s8TAlLf/uESfrgfrq2+rcXB1muPJYBWbsm1Oa6r5qVQhjA5ggM6z/coYPrsVMgovl3Ff7Q7OCp1w==}
-    engines: {node: '>=16.0.0'}
-
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
 
@@ -1947,24 +1729,6 @@ packages:
 
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
-
-  '@swc/helpers@0.5.17':
-    resolution: {integrity: sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==}
-
-  '@tsconfig/node10@1.0.11':
-    resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
-
-  '@tsconfig/node12@1.0.11':
-    resolution: {integrity: sha512-cqefuRsh12pWyGsIoBKJA9luFu3mRxCA+ORZvA4ktLSzIuCUtWVxGIuXigEwO5/ywWFMZ2QEGKWvkZG1zDMTag==}
-
-  '@tsconfig/node14@1.0.3':
-    resolution: {integrity: sha512-ysT8mhdixWK6Hw3i1V2AeRqZ5WfXg1G43mqoYlM2nc6388Fq5jcXyr5mRsqViLx/GJYdoL0bfXD8nmF+Zn/Iow==}
-
-  '@tsconfig/node16@1.0.4':
-    resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
-
-  '@tybys/wasm-util@0.9.0':
-    resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
 
   '@types/adm-zip@0.5.7':
     resolution: {integrity: sha512-DNEs/QvmyRLurdQPChqq0Md4zGvPwHerAJYWk9l2jCbD1VPpnzRJorOdiq4zsw09NFbYnhfsoEhWtxIzXpn2yw==}
@@ -2145,10 +1909,6 @@ packages:
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  acorn-walk@8.3.4:
-    resolution: {integrity: sha512-ueEepnujpqee2o5aIYnvHU6C0A42MNdsIDeqy5BydrkuC5R1ZuUFnm27EeFJGoEHJQgn3uleRvmTXaJgfXbt4g==}
-    engines: {node: '>=0.4.0'}
-
   acorn@8.15.0:
     resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
     engines: {node: '>=0.4.0'}
@@ -2222,9 +1982,6 @@ packages:
 
   arch@2.2.0:
     resolution: {integrity: sha512-Of/R0wqp83cgHozfIYLbBMnej79U/SVGOOyuB3VVFv1NRM/PSFMK12x9KVtiYzJqmnU5WR2qp0Z5rHb7sWGnFQ==}
-
-  arg@4.1.3:
-    resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==}
 
   arg@5.0.2:
     resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
@@ -2592,9 +2349,6 @@ packages:
   core-js-compat@3.44.0:
     resolution: {integrity: sha512-JepmAj2zfl6ogy34qfWtcE7nHKAJnKsQFRn++scjVS2bZFllwptzw61BZcZFYBPpUznLfAvh0LGhxKppk04ClA==}
 
-  core-js@3.44.0:
-    resolution: {integrity: sha512-aFCtd4l6GvAXwVEh3XbbVqJGHDJt0OZRa+5ePGx3LLwi12WfexqQxcsohb2wgsa/92xtl19Hd66G/L+TaAxDMw==}
-
   cosmiconfig@5.2.1:
     resolution: {integrity: sha512-H65gsXo1SKjf8zmrJ67eJk8aIRKV5ff2D4uKZIBZShbhGSpEmsQOPW/SKMKYhSTrqR7ufy6RP69rPogdaPh/kA==}
     engines: {node: '>=4'}
@@ -2612,9 +2366,6 @@ packages:
     resolution: {integrity: sha512-Adz2bdH0Vq3F53KEMJOoftQFutWCukm6J24wbPWRO4k1kMY7gS7ds/uoJkNuV8wDCtWWnuwGcJwpWcih+zEW1Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
-
-  create-require@1.1.1:
-    resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -2729,10 +2480,6 @@ packages:
   diff-sequences@29.6.3:
     resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-
-  diff@4.0.2:
-    resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
-    engines: {node: '>=0.3.1'}
 
   dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
@@ -3637,10 +3384,6 @@ packages:
       node-notifier:
         optional: true
 
-  jiti@2.4.2:
-    resolution: {integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==}
-    hasBin: true
-
   joi@17.13.3:
     resolution: {integrity: sha512-otDA4ldcIx+ZXsKHWmp0YizCweVRZG96J10b0FevjfuncLO1oX59THoAmHkNubYJ+9gWsYsp5k8v4ib6oDv1fA==}
 
@@ -3760,15 +3503,9 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  magic-string@0.30.17:
-    resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
-
   make-dir@4.0.0:
     resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==}
     engines: {node: '>=10'}
-
-  make-error@1.3.6:
-    resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
 
   makeerror@1.0.12:
     resolution: {integrity: sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==}
@@ -4407,19 +4144,6 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  rsbuild-plugin-dts@0.10.5:
-    resolution: {integrity: sha512-gjngxgV0RD4T7aKDTf7kho9IUBNjHR+Y3krYwNEnUakOiuk9Fn03MxVCcASyCsPY+H7HooI8P8wXZoPhiSWSZA==}
-    engines: {node: '>=16.7.0'}
-    peerDependencies:
-      '@microsoft/api-extractor': ^7
-      '@rsbuild/core': 1.x
-      typescript: ^5
-    peerDependenciesMeta:
-      '@microsoft/api-extractor':
-        optional: true
-      typescript:
-        optional: true
-
   run-applescript@7.0.0:
     resolution: {integrity: sha512-9by4Ij99JUr/MCFBUkDKLWK3G9HVXmabKz9U5MlIAIuvuzkiOicRYs8XJLxX+xahD+mLiiCYDqF9dKAgtzKP1A==}
     engines: {node: '>=18'}
@@ -4649,10 +4373,6 @@ packages:
     resolution: {integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==}
     engines: {node: '>=12'}
 
-  strip-bom@3.0.0:
-    resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
-    engines: {node: '>=4'}
-
   strip-bom@4.0.0:
     resolution: {integrity: sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==}
     engines: {node: '>=8'}
@@ -4735,27 +4455,9 @@ packages:
     peerDependencies:
       typescript: '>=4.2.0'
 
-  ts-node@10.9.2:
-    resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
-    hasBin: true
-    peerDependencies:
-      '@swc/core': '>=1.2.50'
-      '@swc/wasm': '>=1.2.50'
-      '@types/node': '*'
-      typescript: '>=2.7'
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      '@swc/wasm':
-        optional: true
-
   ts-regex-builder@1.8.2:
     resolution: {integrity: sha512-Y8HovHFheDKm/jgLIWSO8o81xA/I9O5AGc3/vNG1sVSskatOifr3SQzAsatBXGLjL3nYhQif1MpwQRS5GF8ADg==}
     engines: {node: '>= 18.0.0'}
-
-  tsconfig-paths@4.2.0:
-    resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
-    engines: {node: '>=6'}
 
   tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
@@ -4852,11 +4554,6 @@ packages:
     engines: {node: '>=12.20'}
     hasBin: true
 
-  typescript@5.8.3:
-    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-
   unbox-primitive@1.1.0:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
     engines: {node: '>= 0.4'}
@@ -4916,9 +4613,6 @@ packages:
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
     hasBin: true
-
-  v8-compile-cache-lib@3.0.1:
-    resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
   v8-to-istanbul@9.3.0:
     resolution: {integrity: sha512-kiGUalWN+rgBJ/1OHZsBtU4rXZOfj/7rKQxULKlIzwzQSvMJUUNgPwJEEh7gU6xEVxC0ahoOBvN2YI8GH6FNgA==}
@@ -5123,10 +4817,6 @@ packages:
     resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
 
-  yn@3.1.1:
-    resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==}
-    engines: {node: '>=6'}
-
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
@@ -5154,45 +4844,6 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.12
       '@jridgewell/trace-mapping': 0.3.29
-
-  '@ast-grep/napi-darwin-arm64@0.37.0':
-    optional: true
-
-  '@ast-grep/napi-darwin-x64@0.37.0':
-    optional: true
-
-  '@ast-grep/napi-linux-arm64-gnu@0.37.0':
-    optional: true
-
-  '@ast-grep/napi-linux-arm64-musl@0.37.0':
-    optional: true
-
-  '@ast-grep/napi-linux-x64-gnu@0.37.0':
-    optional: true
-
-  '@ast-grep/napi-linux-x64-musl@0.37.0':
-    optional: true
-
-  '@ast-grep/napi-win32-arm64-msvc@0.37.0':
-    optional: true
-
-  '@ast-grep/napi-win32-ia32-msvc@0.37.0':
-    optional: true
-
-  '@ast-grep/napi-win32-x64-msvc@0.37.0':
-    optional: true
-
-  '@ast-grep/napi@0.37.0':
-    optionalDependencies:
-      '@ast-grep/napi-darwin-arm64': 0.37.0
-      '@ast-grep/napi-darwin-x64': 0.37.0
-      '@ast-grep/napi-linux-arm64-gnu': 0.37.0
-      '@ast-grep/napi-linux-arm64-musl': 0.37.0
-      '@ast-grep/napi-linux-x64-gnu': 0.37.0
-      '@ast-grep/napi-linux-x64-musl': 0.37.0
-      '@ast-grep/napi-win32-arm64-msvc': 0.37.0
-      '@ast-grep/napi-win32-ia32-msvc': 0.37.0
-      '@ast-grep/napi-win32-x64-msvc': 0.37.0
 
   '@babel/code-frame@7.27.1':
     dependencies:
@@ -6059,26 +5710,6 @@ snapshots:
       picocolors: 1.1.1
       sisteransi: 1.0.5
 
-  '@cspotcode/source-map-support@0.8.1':
-    dependencies:
-      '@jridgewell/trace-mapping': 0.3.9
-
-  '@emnapi/core@1.4.4':
-    dependencies:
-      '@emnapi/wasi-threads': 1.0.3
-      tslib: 2.8.1
-    optional: true
-
-  '@emnapi/runtime@1.4.4':
-    dependencies:
-      tslib: 2.8.1
-    optional: true
-
-  '@emnapi/wasi-threads@1.0.3':
-    dependencies:
-      tslib: 2.8.1
-    optional: true
-
   '@esbuild/aix-ppc64@0.25.9':
     optional: true
 
@@ -6195,9 +5826,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@expo/metro-runtime@5.0.4(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.8.3))(@types/react@19.1.8)(react@19.1.0))':
+  '@expo/metro-runtime@5.0.4(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))':
     dependencies:
-      react-native: 0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.8.3))(@types/react@19.1.8)(react@19.1.0)
+      react-native: 0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0)
 
   '@expo/spawn-async@1.7.2':
     dependencies:
@@ -6246,7 +5877,7 @@ snapshots:
       jest-util: 29.7.0
       slash: 3.0.0
 
-  '@jest/core@29.7.0(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))':
+  '@jest/core@29.7.0':
     dependencies:
       '@jest/console': 29.7.0
       '@jest/reporters': 29.7.0
@@ -6260,7 +5891,7 @@ snapshots:
       exit: 0.1.2
       graceful-fs: 4.2.11
       jest-changed-files: 29.7.0
-      jest-config: 29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+      jest-config: 29.7.0(@types/node@20.19.6)
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
@@ -6430,26 +6061,42 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.4
 
-  '@jridgewell/trace-mapping@0.3.9':
-    dependencies:
-      '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.5.4
-
   '@module-federation/automatic-vendor-federation@1.2.1':
     dependencies:
       find-package-json: 1.2.0
 
   '@module-federation/error-codes@0.15.0': {}
 
+  '@module-federation/error-codes@0.18.4': {}
+
+  '@module-federation/metro-plugin-rnef@0.18.4(@module-federation/metro@0.18.4(@babel/types@7.28.0)(metro-config@0.82.5)(metro-file-map@0.82.5)(metro-resolver@0.82.5)(metro-source-map@0.82.5)(metro@0.82.5)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0))(@rnef/tools@0.7.28)':
+    dependencies:
+      '@module-federation/metro': 0.18.4(@babel/types@7.28.0)(metro-config@0.82.5)(metro-file-map@0.82.5)(metro-resolver@0.82.5)(metro-source-map@0.82.5)(metro@0.82.5)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)
+      '@rnef/tools': 0.7.28
+
+  '@module-federation/metro@0.18.4(@babel/types@7.28.0)(metro-config@0.82.5)(metro-file-map@0.82.5)(metro-resolver@0.82.5)(metro-source-map@0.82.5)(metro@0.82.5)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)':
+    dependencies:
+      '@babel/types': 7.28.0
+      '@expo/metro-runtime': 5.0.4(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0))
+      '@module-federation/runtime': 0.18.4
+      '@module-federation/sdk': 0.18.4
+      metro: 0.82.5
+      metro-config: 0.82.5
+      metro-file-map: 0.82.5
+      metro-resolver: 0.82.5
+      metro-source-map: 0.82.5
+      react: 19.1.0
+      react-native: 0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0)
+
   '@module-federation/runtime-core@0.15.0':
     dependencies:
       '@module-federation/error-codes': 0.15.0
       '@module-federation/sdk': 0.15.0
 
-  '@module-federation/runtime-tools@0.15.0':
+  '@module-federation/runtime-core@0.18.4':
     dependencies:
-      '@module-federation/runtime': 0.15.0
-      '@module-federation/webpack-bundler-runtime': 0.15.0
+      '@module-federation/error-codes': 0.18.4
+      '@module-federation/sdk': 0.18.4
 
   '@module-federation/runtime@0.15.0':
     dependencies:
@@ -6457,19 +6104,15 @@ snapshots:
       '@module-federation/runtime-core': 0.15.0
       '@module-federation/sdk': 0.15.0
 
+  '@module-federation/runtime@0.18.4':
+    dependencies:
+      '@module-federation/error-codes': 0.18.4
+      '@module-federation/runtime-core': 0.18.4
+      '@module-federation/sdk': 0.18.4
+
   '@module-federation/sdk@0.15.0': {}
 
-  '@module-federation/webpack-bundler-runtime@0.15.0':
-    dependencies:
-      '@module-federation/runtime': 0.15.0
-      '@module-federation/sdk': 0.15.0
-
-  '@napi-rs/wasm-runtime@0.2.11':
-    dependencies:
-      '@emnapi/core': 1.4.4
-      '@emnapi/runtime': 1.4.4
-      '@tybys/wasm-util': 0.9.0
-    optional: true
+  '@module-federation/sdk@0.18.4': {}
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     dependencies:
@@ -6549,18 +6192,6 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@react-native-community/cli-config@19.1.0(typescript@5.8.3)':
-    dependencies:
-      '@react-native-community/cli-tools': 19.1.0
-      chalk: 4.1.2
-      cosmiconfig: 9.0.0(typescript@5.8.3)
-      deepmerge: 4.3.1
-      fast-glob: 3.3.3
-      joi: 17.13.3
-    transitivePeerDependencies:
-      - typescript
-    optional: true
-
   '@react-native-community/cli-doctor@19.1.0(typescript@5.0.4)':
     dependencies:
       '@react-native-community/cli-config': 19.1.0(typescript@5.0.4)
@@ -6580,27 +6211,6 @@ snapshots:
       yaml: 2.8.0
     transitivePeerDependencies:
       - typescript
-
-  '@react-native-community/cli-doctor@19.1.0(typescript@5.8.3)':
-    dependencies:
-      '@react-native-community/cli-config': 19.1.0(typescript@5.8.3)
-      '@react-native-community/cli-platform-android': 19.1.0
-      '@react-native-community/cli-platform-apple': 19.1.0
-      '@react-native-community/cli-platform-ios': 19.1.0
-      '@react-native-community/cli-tools': 19.1.0
-      chalk: 4.1.2
-      command-exists: 1.2.9
-      deepmerge: 4.3.1
-      envinfo: 7.14.0
-      execa: 5.1.1
-      node-stream-zip: 1.15.0
-      ora: 5.4.1
-      semver: 7.7.2
-      wcwidth: 1.0.1
-      yaml: 2.8.0
-    transitivePeerDependencies:
-      - typescript
-    optional: true
 
   '@react-native-community/cli-platform-android@19.1.0':
     dependencies:
@@ -6713,30 +6323,6 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@react-native-community/cli@19.1.0(typescript@5.8.3)':
-    dependencies:
-      '@react-native-community/cli-clean': 19.1.0
-      '@react-native-community/cli-config': 19.1.0(typescript@5.8.3)
-      '@react-native-community/cli-doctor': 19.1.0(typescript@5.8.3)
-      '@react-native-community/cli-server-api': 19.1.0
-      '@react-native-community/cli-tools': 19.1.0
-      '@react-native-community/cli-types': 19.1.0
-      chalk: 4.1.2
-      commander: 9.5.0
-      deepmerge: 4.3.1
-      execa: 5.1.1
-      find-up: 5.0.0
-      fs-extra: 8.1.0
-      graceful-fs: 4.2.11
-      prompts: 2.4.2
-      semver: 7.7.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - typescript
-      - utf-8-validate
-    optional: true
-
   '@react-native/assets-registry@0.80.0': {}
 
   '@react-native/babel-plugin-codegen@0.80.0(@babel/core@7.28.0)':
@@ -6823,23 +6409,6 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@react-native/community-cli-plugin@0.80.0(@react-native-community/cli@19.1.0(typescript@5.8.3))':
-    dependencies:
-      '@react-native/dev-middleware': 0.80.0
-      chalk: 4.1.2
-      debug: 4.4.1(supports-color@5.5.0)
-      invariant: 2.2.4
-      metro: 0.82.5
-      metro-config: 0.82.5
-      metro-core: 0.82.5
-      semver: 7.7.2
-    optionalDependencies:
-      '@react-native-community/cli': 19.1.0(typescript@5.8.3)
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
   '@react-native/debugger-frontend@0.79.5': {}
 
   '@react-native/debugger-frontend@0.80.0': {}
@@ -6880,7 +6449,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@react-native/eslint-config@0.80.0(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4)))(prettier@2.8.8)(typescript@5.0.4)':
+  '@react-native/eslint-config@0.80.0(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6))(prettier@2.8.8)(typescript@5.0.4)':
     dependencies:
       '@babel/core': 7.28.0
       '@babel/eslint-parser': 7.28.0(@babel/core@7.28.0)(eslint@8.57.1)
@@ -6891,7 +6460,7 @@ snapshots:
       eslint-config-prettier: 8.10.0(eslint@8.57.1)
       eslint-plugin-eslint-comments: 3.2.0(eslint@8.57.1)
       eslint-plugin-ft-flow: 2.0.3(@babel/eslint-parser@7.28.0(@babel/core@7.28.0)(eslint@8.57.1))(eslint@8.57.1)
-      eslint-plugin-jest: 27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.0.4))(eslint@8.57.1)(typescript@5.0.4))(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4)))(typescript@5.0.4)
+      eslint-plugin-jest: 27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.0.4))(eslint@8.57.1)(typescript@5.0.4))(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6))(typescript@5.0.4)
       eslint-plugin-react: 7.37.5(eslint@8.57.1)
       eslint-plugin-react-hooks: 5.2.0(eslint@8.57.1)
       eslint-plugin-react-native: 4.1.0(eslint@8.57.1)
@@ -6924,9 +6493,7 @@ snapshots:
       metro-runtime: 0.82.5
     transitivePeerDependencies:
       - '@babel/core'
-      - bufferutil
       - supports-color
-      - utf-8-validate
 
   '@react-native/normalize-colors@0.80.0': {}
 
@@ -6938,15 +6505,6 @@ snapshots:
       nullthrows: 1.1.1
       react: 19.1.0
       react-native: 0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.0.4))(@types/react@19.1.8)(react@19.1.0)
-    optionalDependencies:
-      '@types/react': 19.1.8
-
-  '@react-native/virtualized-lists@0.80.0(@types/react@19.1.8)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.8.3))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)':
-    dependencies:
-      invariant: 2.2.4
-      nullthrows: 1.1.1
-      react: 19.1.0
-      react-native: 0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.8.3))(@types/react@19.1.8)(react@19.1.0)
     optionalDependencies:
       '@types/react': 19.1.8
 
@@ -7108,77 +6666,6 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.49.0':
     optional: true
 
-  '@rsbuild/core@1.4.5':
-    dependencies:
-      '@rspack/core': 1.4.5(@swc/helpers@0.5.17)
-      '@rspack/lite-tapable': 1.0.1
-      '@swc/helpers': 0.5.17
-      core-js: 3.44.0
-      jiti: 2.4.2
-
-  '@rslib/core@0.10.5(typescript@5.8.3)':
-    dependencies:
-      '@rsbuild/core': 1.4.5
-      rsbuild-plugin-dts: 0.10.5(@rsbuild/core@1.4.5)(typescript@5.8.3)
-      tinyglobby: 0.2.14
-    optionalDependencies:
-      typescript: 5.8.3
-
-  '@rspack/binding-darwin-arm64@1.4.5':
-    optional: true
-
-  '@rspack/binding-darwin-x64@1.4.5':
-    optional: true
-
-  '@rspack/binding-linux-arm64-gnu@1.4.5':
-    optional: true
-
-  '@rspack/binding-linux-arm64-musl@1.4.5':
-    optional: true
-
-  '@rspack/binding-linux-x64-gnu@1.4.5':
-    optional: true
-
-  '@rspack/binding-linux-x64-musl@1.4.5':
-    optional: true
-
-  '@rspack/binding-wasm32-wasi@1.4.5':
-    dependencies:
-      '@napi-rs/wasm-runtime': 0.2.11
-    optional: true
-
-  '@rspack/binding-win32-arm64-msvc@1.4.5':
-    optional: true
-
-  '@rspack/binding-win32-ia32-msvc@1.4.5':
-    optional: true
-
-  '@rspack/binding-win32-x64-msvc@1.4.5':
-    optional: true
-
-  '@rspack/binding@1.4.5':
-    optionalDependencies:
-      '@rspack/binding-darwin-arm64': 1.4.5
-      '@rspack/binding-darwin-x64': 1.4.5
-      '@rspack/binding-linux-arm64-gnu': 1.4.5
-      '@rspack/binding-linux-arm64-musl': 1.4.5
-      '@rspack/binding-linux-x64-gnu': 1.4.5
-      '@rspack/binding-linux-x64-musl': 1.4.5
-      '@rspack/binding-wasm32-wasi': 1.4.5
-      '@rspack/binding-win32-arm64-msvc': 1.4.5
-      '@rspack/binding-win32-ia32-msvc': 1.4.5
-      '@rspack/binding-win32-x64-msvc': 1.4.5
-
-  '@rspack/core@1.4.5(@swc/helpers@0.5.17)':
-    dependencies:
-      '@module-federation/runtime-tools': 0.15.0
-      '@rspack/binding': 1.4.5
-      '@rspack/lite-tapable': 1.0.1
-    optionalDependencies:
-      '@swc/helpers': 0.5.17
-
-  '@rspack/lite-tapable@1.0.1': {}
-
   '@sideway/address@4.1.5':
     dependencies:
       '@hapi/hoek': 9.3.0
@@ -7198,23 +6685,6 @@ snapshots:
       '@sinonjs/commons': 3.0.1
 
   '@socket.io/component-emitter@3.1.2': {}
-
-  '@swc/helpers@0.5.17':
-    dependencies:
-      tslib: 2.8.1
-
-  '@tsconfig/node10@1.0.11': {}
-
-  '@tsconfig/node12@1.0.11': {}
-
-  '@tsconfig/node14@1.0.3': {}
-
-  '@tsconfig/node16@1.0.4': {}
-
-  '@tybys/wasm-util@0.9.0':
-    dependencies:
-      tslib: 2.8.1
-    optional: true
 
   '@types/adm-zip@0.5.7':
     dependencies:
@@ -7444,10 +6914,6 @@ snapshots:
     dependencies:
       acorn: 8.15.0
 
-  acorn-walk@8.3.4:
-    dependencies:
-      acorn: 8.15.0
-
   acorn@8.15.0: {}
 
   adm-zip@0.5.16: {}
@@ -7514,8 +6980,6 @@ snapshots:
   appdirsjs@1.2.7: {}
 
   arch@2.2.0: {}
-
-  arg@4.1.3: {}
 
   arg@5.0.2: {}
 
@@ -7993,8 +7457,6 @@ snapshots:
     dependencies:
       browserslist: 4.25.1
 
-  core-js@3.44.0: {}
-
   cosmiconfig@5.2.1:
     dependencies:
       import-fresh: 2.0.0
@@ -8011,23 +7473,13 @@ snapshots:
     optionalDependencies:
       typescript: 5.0.4
 
-  cosmiconfig@9.0.0(typescript@5.8.3):
-    dependencies:
-      env-paths: 2.2.1
-      import-fresh: 3.3.1
-      js-yaml: 4.1.0
-      parse-json: 5.2.0
-    optionalDependencies:
-      typescript: 5.8.3
-    optional: true
-
-  create-jest@29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4)):
+  create-jest@29.7.0(@types/node@20.19.6):
     dependencies:
       '@jest/types': 29.6.3
       chalk: 4.1.2
       exit: 0.1.2
       graceful-fs: 4.2.11
-      jest-config: 29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+      jest-config: 29.7.0(@types/node@20.19.6)
       jest-util: 29.7.0
       prompts: 2.4.2
     transitivePeerDependencies:
@@ -8035,8 +7487,6 @@ snapshots:
       - babel-plugin-macros
       - supports-color
       - ts-node
-
-  create-require@1.1.1: {}
 
   cross-spawn@7.0.6:
     dependencies:
@@ -8124,8 +7574,6 @@ snapshots:
   detect-newline@3.1.0: {}
 
   diff-sequences@29.6.3: {}
-
-  diff@4.0.2: {}
 
   dir-glob@3.0.1:
     dependencies:
@@ -8349,13 +7797,13 @@ snapshots:
       lodash: 4.17.21
       string-natural-compare: 3.0.1
 
-  eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.0.4))(eslint@8.57.1)(typescript@5.0.4))(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4)))(typescript@5.0.4):
+  eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.0.4))(eslint@8.57.1)(typescript@5.0.4))(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.6))(typescript@5.0.4):
     dependencies:
       '@typescript-eslint/utils': 5.62.0(eslint@8.57.1)(typescript@5.0.4)
       eslint: 8.57.1
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.0.4))(eslint@8.57.1)(typescript@5.0.4)
-      jest: 29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+      jest: 29.7.0(@types/node@20.19.6)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -9063,16 +8511,16 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
-  jest-cli@29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4)):
+  jest-cli@29.7.0(@types/node@20.19.6):
     dependencies:
-      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+      '@jest/core': 29.7.0
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
       chalk: 4.1.2
-      create-jest: 29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+      create-jest: 29.7.0(@types/node@20.19.6)
       exit: 0.1.2
       import-local: 3.2.0
-      jest-config: 29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+      jest-config: 29.7.0(@types/node@20.19.6)
       jest-util: 29.7.0
       jest-validate: 29.7.0
       yargs: 17.7.2
@@ -9082,7 +8530,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  jest-config@29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4)):
+  jest-config@29.7.0(@types/node@20.19.6):
     dependencies:
       '@babel/core': 7.28.0
       '@jest/test-sequencer': 29.7.0
@@ -9108,7 +8556,6 @@ snapshots:
       strip-json-comments: 3.1.1
     optionalDependencies:
       '@types/node': 20.19.6
-      ts-node: 10.9.2(@types/node@20.19.6)(typescript@5.0.4)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -9328,19 +8775,17 @@ snapshots:
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
-  jest@29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4)):
+  jest@29.7.0(@types/node@20.19.6):
     dependencies:
-      '@jest/core': 29.7.0(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+      '@jest/core': 29.7.0
       '@jest/types': 29.6.3
       import-local: 3.2.0
-      jest-cli: 29.7.0(@types/node@20.19.6)(ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4))
+      jest-cli: 29.7.0(@types/node@20.19.6)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
       - supports-color
       - ts-node
-
-  jiti@2.4.2: {}
 
   joi@17.13.3:
     dependencies:
@@ -9456,15 +8901,9 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  magic-string@0.30.17:
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.4
-
   make-dir@4.0.0:
     dependencies:
       semver: 7.7.2
-
-  make-error@1.3.6: {}
 
   makeerror@1.0.12:
     dependencies:
@@ -10100,53 +9539,6 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.8.3))(@types/react@19.1.8)(react@19.1.0):
-    dependencies:
-      '@jest/create-cache-key-function': 29.7.0
-      '@react-native/assets-registry': 0.80.0
-      '@react-native/codegen': 0.80.0(@babel/core@7.28.0)
-      '@react-native/community-cli-plugin': 0.80.0(@react-native-community/cli@19.1.0(typescript@5.8.3))
-      '@react-native/gradle-plugin': 0.80.0
-      '@react-native/js-polyfills': 0.80.0
-      '@react-native/normalize-colors': 0.80.0
-      '@react-native/virtualized-lists': 0.80.0(@types/react@19.1.8)(react-native@0.80.0(@babel/core@7.28.0)(@react-native-community/cli@19.1.0(typescript@5.8.3))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)
-      abort-controller: 3.0.0
-      anser: 1.4.10
-      ansi-regex: 5.0.1
-      babel-jest: 29.7.0(@babel/core@7.28.0)
-      babel-plugin-syntax-hermes-parser: 0.28.1
-      base64-js: 1.5.1
-      chalk: 4.1.2
-      commander: 12.1.0
-      flow-enums-runtime: 0.0.6
-      glob: 7.2.3
-      invariant: 2.2.4
-      jest-environment-node: 29.7.0
-      memoize-one: 5.2.1
-      metro-runtime: 0.82.5
-      metro-source-map: 0.82.5
-      nullthrows: 1.1.1
-      pretty-format: 29.7.0
-      promise: 8.3.0
-      react: 19.1.0
-      react-devtools-core: 6.1.5
-      react-refresh: 0.14.2
-      regenerator-runtime: 0.13.11
-      scheduler: 0.26.0
-      semver: 7.7.2
-      stacktrace-parser: 0.1.11
-      whatwg-fetch: 3.6.20
-      ws: 6.2.3
-      yargs: 17.7.2
-    optionalDependencies:
-      '@types/react': 19.1.8
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@react-native-community/cli'
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
   react-refresh@0.14.2: {}
 
   react-test-renderer@19.1.0(react@19.1.0):
@@ -10287,17 +9679,6 @@ snapshots:
       '@rollup/rollup-win32-ia32-msvc': 4.49.0
       '@rollup/rollup-win32-x64-msvc': 4.49.0
       fsevents: 2.3.3
-
-  rsbuild-plugin-dts@0.10.5(@rsbuild/core@1.4.5)(typescript@5.8.3):
-    dependencies:
-      '@ast-grep/napi': 0.37.0
-      '@rsbuild/core': 1.4.5
-      magic-string: 0.30.17
-      picocolors: 1.1.1
-      tinyglobby: 0.2.14
-      tsconfig-paths: 4.2.0
-    optionalDependencies:
-      typescript: 5.8.3
 
   run-applescript@7.0.0: {}
 
@@ -10605,8 +9986,6 @@ snapshots:
     dependencies:
       ansi-regex: 6.1.0
 
-  strip-bom@3.0.0: {}
-
   strip-bom@4.0.0: {}
 
   strip-final-newline@2.0.0: {}
@@ -10678,50 +10057,7 @@ snapshots:
     dependencies:
       typescript: 5.0.4
 
-  ts-node@10.9.2(@types/node@20.19.6)(typescript@5.0.4):
-    dependencies:
-      '@cspotcode/source-map-support': 0.8.1
-      '@tsconfig/node10': 1.0.11
-      '@tsconfig/node12': 1.0.11
-      '@tsconfig/node14': 1.0.3
-      '@tsconfig/node16': 1.0.4
-      '@types/node': 20.19.6
-      acorn: 8.15.0
-      acorn-walk: 8.3.4
-      arg: 4.1.3
-      create-require: 1.1.1
-      diff: 4.0.2
-      make-error: 1.3.6
-      typescript: 5.0.4
-      v8-compile-cache-lib: 3.0.1
-      yn: 3.1.1
-    optional: true
-
-  ts-node@10.9.2(@types/node@20.19.6)(typescript@5.8.3):
-    dependencies:
-      '@cspotcode/source-map-support': 0.8.1
-      '@tsconfig/node10': 1.0.11
-      '@tsconfig/node12': 1.0.11
-      '@tsconfig/node14': 1.0.3
-      '@tsconfig/node16': 1.0.4
-      '@types/node': 20.19.6
-      acorn: 8.15.0
-      acorn-walk: 8.3.4
-      arg: 4.1.3
-      create-require: 1.1.1
-      diff: 4.0.2
-      make-error: 1.3.6
-      typescript: 5.8.3
-      v8-compile-cache-lib: 3.0.1
-      yn: 3.1.1
-
   ts-regex-builder@1.8.2: {}
-
-  tsconfig-paths@4.2.0:
-    dependencies:
-      json5: 2.2.3
-      minimist: 1.2.8
-      strip-bom: 3.0.0
 
   tslib@1.14.1: {}
 
@@ -10813,8 +10149,6 @@ snapshots:
 
   typescript@5.0.4: {}
 
-  typescript@5.8.3: {}
-
   unbox-primitive@1.1.0:
     dependencies:
       call-bound: 1.0.4
@@ -10864,8 +10198,6 @@ snapshots:
 
   uuid@8.3.2: {}
 
-  v8-compile-cache-lib@3.0.1: {}
-
   v8-to-istanbul@9.3.0:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.29
@@ -10874,7 +10206,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@6.3.5(@types/node@20.19.6)(jiti@2.4.2)(terser@5.43.1)(yaml@2.8.0):
+  vite@6.3.5(@types/node@20.19.6)(terser@5.43.1)(yaml@2.8.0):
     dependencies:
       esbuild: 0.25.9
       fdir: 6.4.6(picomatch@4.0.2)
@@ -10885,7 +10217,6 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.19.6
       fsevents: 2.3.3
-      jiti: 2.4.2
       terser: 5.43.1
       yaml: 2.8.0
 
@@ -11045,8 +10376,6 @@ snapshots:
       y18n: 5.0.8
       yargs-parser: 21.1.1
 
-  yn@3.1.1: {}
-
   yocto-queue@0.1.0: {}
 
   zephyr-agent@0.0.0-canary-20250813124421:
@@ -11075,11 +10404,11 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  zephyr-metro-plugin@0.0.0-canary-20250813124421(@types/node@20.19.6)(jiti@2.4.2)(metro-config@0.82.5)(terser@5.43.1)(yaml@2.8.0):
+  zephyr-metro-plugin@0.0.0-canary-20250813124421(@types/node@20.19.6)(metro-config@0.82.5)(terser@5.43.1)(yaml@2.8.0):
     dependencies:
       metro-config: 0.82.5
       zephyr-agent: 0.0.0-canary-20250813124421
-      zephyr-rollx-internal: 0.0.0-canary-20250813124421(@types/node@20.19.6)(jiti@2.4.2)(terser@5.43.1)(yaml@2.8.0)
+      zephyr-rollx-internal: 0.0.0-canary-20250813124421(@types/node@20.19.6)(terser@5.43.1)(yaml@2.8.0)
       zephyr-xpack-internal: 0.0.0-canary-20250813124421
     transitivePeerDependencies:
       - '@types/node'
@@ -11099,11 +10428,11 @@ snapshots:
       - webpack
       - yaml
 
-  zephyr-rollx-internal@0.0.0-canary-20250813124421(@types/node@20.19.6)(jiti@2.4.2)(terser@5.43.1)(yaml@2.8.0):
+  zephyr-rollx-internal@0.0.0-canary-20250813124421(@types/node@20.19.6)(terser@5.43.1)(yaml@2.8.0):
     dependencies:
       is-ci: 4.1.0
       rollup: 4.49.0
-      vite: 6.3.5(@types/node@20.19.6)(jiti@2.4.2)(terser@5.43.1)(yaml@2.8.0)
+      vite: 6.3.5(@types/node@20.19.6)(terser@5.43.1)(yaml@2.8.0)
       zephyr-agent: 0.0.0-canary-20250813124421
     transitivePeerDependencies:
       - '@types/node'
