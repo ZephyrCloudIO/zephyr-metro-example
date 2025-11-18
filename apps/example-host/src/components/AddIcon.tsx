@@ -1,5 +1,5 @@
-import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import type React from 'react';
+import { StyleSheet, View } from 'react-native';
 
 interface AddIconProps {
   width?: number;
@@ -14,8 +14,8 @@ export const AddIcon: React.FC<AddIconProps> = ({
 }) => {
   return (
     <View style={styles.container}>
-      <View style={[styles.vertical, {height, backgroundColor}]} />
-      <View style={[styles.horizontal, {width, backgroundColor}]} />
+      <View style={[styles.vertical, { height, backgroundColor }]} />
+      <View style={[styles.horizontal, { width, backgroundColor }]} />
     </View>
   );
 };

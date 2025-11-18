@@ -1,9 +1,9 @@
 import {
-  View,
-  Text,
-  StyleSheet,
   FlatList,
+  StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
 
 interface Note {
@@ -21,7 +21,7 @@ interface NoteItemProps {
 function extractTitleFromHtml(htmlContent: string): string {
   // Find the first HTML tag and extract its text content
   const match = htmlContent.match(/<[^>]*>([^<]*)<\/[^>]*>/);
-  if (match && match[1]) {
+  if (match?.[1]) {
     const firstTagText = match[1].trim();
     return firstTagText.length > 50
       ? firstTagText.substring(0, 50) + '...'

@@ -57,13 +57,13 @@ class NoteStorageManager {
   }
 
   private notifyListeners(event: NoteChangeEvent) {
-    this.listeners.forEach((listener) => {
+    for (const listener of this.listeners) {
       try {
         listener(event);
       } catch (error) {
         console.error('Error in note change listener:', error);
       }
-    });
+    }
   }
 
   addListener(listener: NoteChangeListener): () => void {

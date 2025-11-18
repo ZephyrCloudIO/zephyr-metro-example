@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
   KeyboardAvoidingView,
   Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
 import {
-  actions,
   RichEditor,
   RichToolbar,
+  actions,
 } from 'react-native-pell-rich-editor';
 
 export type TextEditorProps = {
