@@ -1,12 +1,12 @@
-import type { PluginApi, PluginOutput } from "@rnef/config";
-import { color, logger, outro } from "@rnef/tools";
-import {updateManifest} from "@module-federation/metro";
-import commands from "@module-federation/metro/commands";
+import { updateManifest } from '@module-federation/metro';
+import commands from '@module-federation/metro/commands';
 import type {
   BundleFederatedHostArgs,
   BundleFederatedRemoteArgs,
-} from "@module-federation/metro/commands";
-import { zephyrCommandWrapper as createZephyrCommand } from "zephyr-metro-plugin";
+} from '@module-federation/metro/commands';
+import type { PluginApi, PluginOutput } from '@rnef/config';
+import { color, logger, outro } from '@rnef/tools';
+import { zephyrCommandWrapper as createZephyrCommand } from 'zephyr-metro-plugin';
 
 interface PluginConfig {
   platforms?: Record<string, object>;
@@ -17,8 +17,8 @@ export const zephyrMetroRNEFPlugin =
   (api: PluginApi): PluginOutput => {
     // Register the bundle-mf-host command
     api.registerCommand({
-      name: "bundle-mf-host",
-      description: "Bundles a Module Federation host with Zephyr Cloud",
+      name: 'bundle-mf-host',
+      description: 'Bundles a Module Federation host with Zephyr Cloud',
       action: async (args: BundleFederatedHostArgs) => {
         const commandConfig = {
           root: api.getProjectRoot(),
@@ -33,7 +33,7 @@ export const zephyrMetroRNEFPlugin =
           )} with Zephyr Cloud`
         );
 
-        let bundleZephyrHostCommand = await createZephyrCommand(
+        const bundleZephyrHostCommand = await createZephyrCommand(
           commands.bundleFederatedHost,
           commands.loadMetroConfig as any,
           () => {
@@ -45,16 +45,16 @@ export const zephyrMetroRNEFPlugin =
         );
 
         await bundleZephyrHostCommand([{ ...args }], commandConfig, args);
-        logger.info("Bundle artifacts available at ...");
-        outro(`Success 🎉.`);
+        logger.info('Bundle artifacts available at ...');
+        outro('Success 🎉.');
       },
       options: commands.bundleFederatedHostOptions,
     });
 
     // Register the bundle-mf-remote command
     api.registerCommand({
-      name: "bundle-mf-remote",
-      description: "Bundles a Module Federation remote with Zephyr Cloud",
+      name: 'bundle-mf-remote',
+      description: 'Bundles a Module Federation remote with Zephyr Cloud',
       action: async (args: BundleFederatedRemoteArgs) => {
         const commandConfig = {
           root: api.getProjectRoot(),
@@ -69,7 +69,7 @@ export const zephyrMetroRNEFPlugin =
           )} with Zephyr Cloud`
         );
 
-        let bundleZephyrRemoteCommand = await createZephyrCommand(
+        const bundleZephyrRemoteCommand = await createZephyrCommand(
           commands.bundleFederatedRemote,
           commands.loadMetroConfig as any,
           () => {
@@ -81,14 +81,14 @@ export const zephyrMetroRNEFPlugin =
         );
 
         await bundleZephyrRemoteCommand([{ ...args }], commandConfig, args);
-        logger.info("Bundle artifacts available at ...");
-        outro(`Success 🎉.`);
+        logger.info('Bundle artifacts available at ...');
+        outro('Success 🎉.');
       },
       options: commands.bundleFederatedRemoteOptions,
     });
 
     return {
-      name: "@module-federation/metro-plugin-rnef",
-      description: "RNEF plugin for Module Federation with Metro",
+      name: '@module-federation/metro-plugin-rnef',
+      description: 'RNEF plugin for Module Federation with Metro',
     };
   };

@@ -1,10 +1,10 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
+  type Note,
+  type NoteChangeEvent,
   addNoteChangeListener,
   createNote,
   deleteNote,
-  Note,
-  NoteChangeEvent,
   updateNote,
 } from './NoteStorageManager';
 

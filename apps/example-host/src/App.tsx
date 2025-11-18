@@ -5,24 +5,22 @@
  * @format
  */
 
-import React, {Suspense, useRef, useState} from 'react';
+import React, { Suspense, useRef, useState } from 'react';
 
-import { 
+import {
+  Dimensions,
+  Platform,
   StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
-  Dimensions,
-  Platform,
+  useColorScheme,
 } from 'react-native';
-import {FloatingAction} from 'react-native-floating-action';
+import { FloatingAction } from 'react-native-floating-action';
 
-
-
-import AddIcon from './components/AddIcon';
+import type { RichEditor } from 'react-native-pell-rich-editor';
 // import {Note, useNotes} from '@database';
-import {RichEditor} from 'react-native-pell-rich-editor';
+import AddIcon from './components/AddIcon';
 import { useNotes } from './database/useNotes.ts';
 
 const actions = [
@@ -35,22 +33,20 @@ const actions = [
 
 // @ts-ignore
 const TextEditor = React.lazy(() => import('MFTextEditor/text-editor'));
-
-
 // @ts-ignore
 const NotesList = React.lazy(() => import('MFNotesList/notes-list'));
 
 // Card component with medium border radius, 16px padding, and shadows
-const Card = ({children}: {children: React.ReactNode}) => {
+const Card = ({ children }: { children: React.ReactNode }) => {
   return <View style={styles.card}>{children}</View>;
 };
 
-const BORDER_WIDTH = 8;
+const _BORDER_WIDTH = 8;
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const {createNote, notes, updateNote} = useNotes();
+  const { createNote, notes, updateNote } = useNotes();
 
   const backgroundStyle = {
     backgroundColor: '#F3F3F3',
@@ -83,13 +79,15 @@ function App(): React.JSX.Element {
         backgroundStyle,
         {
           width: screenWidth,
-          height:  screenHeight,
-          paddingTop: Platform.OS === 'ios' ? 60 : StatusBar.currentHeight || 20,
+          height: screenHeight,
+          paddingTop:
+            Platform.OS === 'ios' ? 60 : StatusBar.currentHeight || 20,
           paddingLeft: 0,
           paddingBottom: 0,
           paddingRight: 0,
         },
-      ]}>
+      ]}
+    >
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
@@ -101,14 +99,16 @@ function App(): React.JSX.Element {
           alignItems: 'center',
           paddingHorizontal: 8,
           gap: 16,
-        }}>
+        }}
+      >
         <Card>
           <Suspense
             fallback={
               <View style={styles.card}>
                 <Text>Loading...</Text>
               </View>
-            }>
+            }
+          >
             <TextEditor richtext={richtext} />
           </Suspense>
         </Card>
@@ -118,7 +118,8 @@ function App(): React.JSX.Element {
               <View style={styles.card}>
                 <Text>Loading...</Text>
               </View>
-            }>
+            }
+          >
             <NotesList notes={notes} onNotePress={handleNotePress} />
           </Suspense>
         </Card>
@@ -133,8 +134,6 @@ function App(): React.JSX.Element {
     </View>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   sectionContainer: {
