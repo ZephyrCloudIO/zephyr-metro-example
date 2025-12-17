@@ -50,7 +50,7 @@ runs:
         mkdir -p $RNEF_PATH
         echo "{\"githubToken\": \"${{ inputs.github_token }}\"}" > "$RNEF_PATH/project.json"
 
-    - uses: callstackincubator/ios@v1
+    - uses: callstackincubator/ios@v3
       with:
         github-token: ${{ inputs.github_token }}
         destination: "simulator"
