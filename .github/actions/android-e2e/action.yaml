@@ -57,7 +57,7 @@ runs:
         pnpm --filter ${{ inputs.app_name }} e2e:serve:android &
       shell: bash
 
-    - uses: callstackincubator/android@v1
+    - uses: callstackincubator/android@v3
       with:
         github-token: ${{ inputs.github_token }}
         variant: 'Release'
