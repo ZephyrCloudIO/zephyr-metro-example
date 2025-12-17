@@ -28,7 +28,8 @@
     "overrides": {
       "vite": ">=6.4.1",
       "axios": ">=1.13.2",
-      "on-headers": ">=1.1.0"
+      "on-headers": ">=1.1.0",
+      "@react-native-community/cli-server-api": ">=18.0.1"
     }
   }
 }
