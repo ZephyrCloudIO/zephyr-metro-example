@@ -12,13 +12,10 @@ const { withModuleFederation } = require('@module-federation/metro');
 
 const config = {
   resolver: { useWatchman: false },
-  watchFolders: [
-    path.resolve(__dirname, '../../node_modules'),
-  ],
+  watchFolders: [path.resolve(__dirname, '../../node_modules')],
 };
 
-const getConfig = async () => { 
-
+const getConfig = async () => {
   const zephyrConfig = await withZephyr()({
     name: 'MFTextEditor',
     filename: 'MFTextEditor.bundle',
@@ -53,7 +50,7 @@ const getConfig = async () => {
       },
     },
     shareStrategy: 'version-first',
-  })
+  });
 
   return withModuleFederation(
     mergeConfig(getDefaultConfig(__dirname), config),
@@ -65,7 +62,7 @@ const getConfig = async () => {
         unstable_patchRuntimeRequire: true,
       },
     }
-  )
-}
+  );
+};
 
-module.exports = getConfig
+module.exports = getConfig;

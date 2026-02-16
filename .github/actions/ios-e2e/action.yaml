@@ -13,7 +13,7 @@ runs:
   using: "composite"
   steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         submodules: true
         clean: true
@@ -23,12 +23,12 @@ runs:
       with:
         ruby-version: ${{ env.RUBY_VERSION }}
 
-    - uses: pnpm/action-setup@v3
+    - uses: pnpm/action-setup@v4
 
     - name: Set up Node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
-        node-version: 22
+        node-version: 24
         cache: 'pnpm'
 
     - name: Install dependencies
@@ -50,7 +50,7 @@ runs:
         mkdir -p $RNEF_PATH
         echo "{\"githubToken\": \"${{ inputs.github_token }}\"}" > "$RNEF_PATH/project.json"
 
-    - uses: callstackincubator/ios@v1
+    - uses: callstackincubator/ios@v3
       with:
         github-token: ${{ inputs.github_token }}
         destination: "simulator"
@@ -73,7 +73,7 @@ runs:
 
     - name: Upload Maestro Logs on Failure
       if: failure() # Runs only if any of the previous steps fail
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: maestro-logs-ios-${{ inputs.app_name }}
         path: ~/.maestro/tests/

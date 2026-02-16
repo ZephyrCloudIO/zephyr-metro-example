@@ -11,12 +11,10 @@ const { withModuleFederation } = require('@module-federation/metro');
 
 const config = {
   resolver: { useWatchman: false },
-  watchFolders: [
-    path.resolve(__dirname, '../../node_modules'),
-  ],
+  watchFolders: [path.resolve(__dirname, '../../node_modules')],
 };
 
-const getConfig = async () => { 
+const getConfig = async () => {
   const mfConfig = {
     name: 'MFExampleHost',
     remotes: {
@@ -50,7 +48,7 @@ const getConfig = async () => {
     },
     shareStrategy: 'loaded-first',
     plugins: [path.resolve(__dirname, './runtime-plugin.ts')],
-  }
+  };
   return withModuleFederation(
     mergeConfig(getDefaultConfig(__dirname), config),
     mfConfig,
@@ -61,7 +59,7 @@ const getConfig = async () => {
         unstable_patchRuntimeRequire: true,
       },
     }
-  )
-}
+  );
+};
 
-module.exports = getConfig
+module.exports = getConfig;

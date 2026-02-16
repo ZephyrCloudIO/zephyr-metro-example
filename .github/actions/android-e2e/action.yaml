@@ -13,7 +13,7 @@ runs:
   using: "composite"
   steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         submodules: true
         clean: true
@@ -25,12 +25,12 @@ runs:
         sudo udevadm trigger --name-match=kvm
       shell: bash
 
-    - uses: pnpm/action-setup@v3
+    - uses: pnpm/action-setup@v4
 
     - name: Set up Node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
-        node-version: 22
+        node-version: 24
         cache: 'pnpm'
 
     - name: Install dependencies
@@ -57,7 +57,7 @@ runs:
         pnpm --filter ${{ inputs.app_name }} e2e:serve:android &
       shell: bash
 
-    - uses: callstackincubator/android@v1
+    - uses: callstackincubator/android@v3
       with:
         github-token: ${{ inputs.github_token }}
         variant: 'Release'
@@ -81,7 +81,7 @@ runs:
 
     - name: Upload Maestro Logs on Failure
       if: failure() # Runs only if any of the previous steps fail
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: maestro-logs-android-${{ inputs.app_name }}
         path: ~/.maestro/tests/
