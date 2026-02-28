@@ -23,12 +23,12 @@
     "dev": "tsc --watch"
   },
   "devDependencies": {
-    "@rnef/config": "^0.7.18",
-    "@rnef/tools": "^0.7.18",
+    "@rnef/config": "^0.8.0",
+    "@rnef/tools": "^0.8.0",
     "@types/node": "^24.0.0",
-    "@module-federation/metro": "0.18.4",
-    "typescript": "5.0.4",
-    "zephyr-metro-plugin": "0.0.0-canary-20250813124421"
+    "@module-federation/metro": "0.24.1",
+    "typescript": "5.9.3",
+    "zephyr-metro-plugin": "0.1.13"
   },
   "peerDependencies": {
     "@rnef/tools": "^0.7.18",
