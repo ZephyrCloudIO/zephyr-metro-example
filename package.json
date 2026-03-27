@@ -1,7 +1,7 @@
 {
   "name": "zephyr-metro-example",
   "license": "MIT",
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.33.0",
   "scripts": {
     "prepare": "pnpm build",
     "build": "turbo build",
@@ -27,18 +27,18 @@
   "pnpm": {
     "overrides": {
       "vite": ">=6.4.1",
-      "axios": "1.13.5",
+      "axios": "1.13.6",
       "on-headers": ">=1.1.0",
       "@react-native-community/cli-server-api": ">=18.0.1",
-      "qs": "6.14.2",
+      "qs": "6.15.0",
       "js-yaml": ">=4.1.1",
       "tar@<=7.5.3": ">=7.5.4",
-      "fast-xml-parser": "5.5.7",
+      "fast-xml-parser": "5.5.9",
       "flatted": "3.4.2",
-      "minimatch": "3.1.4",
-      "tar": "7.5.11",
+      "minimatch": "3.1.5",
+      "tar": "7.5.13",
       "ajv": "6.14.0",
-      "rollup": "4.59.0",
+      "rollup": "4.60.0",
       "socket.io-parser": "4.2.6",
       "lodash": "4.17.23"
     }
